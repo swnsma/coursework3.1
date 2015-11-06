@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<config>
+    <database>
+        <driver>mysql</driver>
+        <host>localhost</host>
+        <port/>
+        <schema>project</schema>
+        <username>root</username>
+        <password>root</password>
+    </database>
+</config>
