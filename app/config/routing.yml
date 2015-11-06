@@ -1,0 +1,7 @@
+lancer_lance:
+    resource: "@LancerLanceBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

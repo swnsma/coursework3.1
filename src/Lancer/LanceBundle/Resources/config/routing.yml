@@ -1,0 +1,3 @@
+lancer_lance_homepage:
+    path:     /hello
+    defaults: { _controller: LancerLanceBundle:Default:index }
