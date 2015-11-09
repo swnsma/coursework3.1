@@ -11,7 +11,7 @@ final class DbConnection
     {
         if (is_null(self::$_connection)) {
             $settings          = self::getConfigToConnectionString();
-            self::$_connection = new \PDO($settings['string'], $settings['username'], $settings['password']);
+            self::$_connection = new \PDO($settings['string'], $settings['username'], $settings['password'],\PDO::FETCH_ASSOC);
         }
 
         return self::$_connection;

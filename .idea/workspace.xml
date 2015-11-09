@@ -25,8 +25,8 @@
       <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.0">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state vertical-scroll-proportion="-6.6666665">
+              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
               <folding>
                 <element signature="e#49#90#0#PHP" expanded="true" />
               </folding>
@@ -34,21 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DebugClassLoader.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Debug/DebugClassLoader.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5925927">
-              <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MagicObject.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MagicObject.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/MagicObject.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.333334">
-              <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.39292732">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding>
                 <element signature="e#191#529#0#PHP" expanded="false" />
                 <element signature="e#535#1138#0#PHP" expanded="false" />
@@ -59,38 +49,7 @@
                 <element signature="e#1899#2019#0#PHP" expanded="false" />
                 <element signature="e#2025#2265#0#PHP" expanded="false" />
                 <element signature="e#2271#2465#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../poortvliet/source/src/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.0">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding>
-                <marker date="1440056887000" expanded="true" signature="1059:1105" placeholder="..." />
-                <marker date="1440056887000" expanded="true" signature="1106:1529" placeholder="..." />
-                <marker date="1440056887000" expanded="false" signature="1120:1168" placeholder="..." />
-                <marker date="1440056887000" expanded="true" signature="1169:1348" placeholder="..." />
-                <marker date="1440056887000" expanded="false" signature="1182:1281" placeholder="..." />
-                <marker date="1440056887000" expanded="true" signature="1282:1342" placeholder="..." />
-                <marker date="1440056887000" expanded="true" signature="1351:1523" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="get.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../poortvliet/source/src/get.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.106090374">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding>
-                <marker date="1440056888184" expanded="true" signature="1045:1091" placeholder="..." />
-                <marker date="1440056888184" expanded="true" signature="1105:1166" placeholder="..." />
-                <marker date="1440056888184" expanded="true" signature="1179:1291" placeholder="..." />
+                <element signature="e#2471#2636#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -99,9 +58,17 @@
       <file leaf-file-name="AbstractModel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.3333333">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="-2.0">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding>
+                <element signature="e#141#276#0#PHP" expanded="false" />
+                <marker date="1447058293238" expanded="true" signature="398:411" placeholder="SELECT * FRO..." />
+                <marker date="1447058293238" expanded="true" signature="398:412" placeholder="SELECT * FRO..." />
+                <marker date="1447058293238" expanded="true" signature="398:435" placeholder="SELECT * FRO..." />
+                <marker date="1447058293238" expanded="true" signature="398:436" placeholder="SELECT * FRO..." />
+                <marker date="1447058293238" expanded="true" signature="398:452" placeholder="SELECT * FRO..." />
+                <marker date="1447058293238" expanded="true" signature="398:453" placeholder="SELECT * FRO..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -109,8 +76,8 @@
       <file leaf-file-name="DbConnection.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/DbConnection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state vertical-scroll-proportion="-10.666667">
+              <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -119,8 +86,8 @@
       <file leaf-file-name="BigBrother.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Config/BigBrother.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.0">
-              <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+            <state vertical-scroll-proportion="-7.962963">
+              <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -160,15 +127,15 @@
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/Resource/Interfaces/Resource.php" />
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractModel.php" />
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Config/GlobalConfig.php" />
         <option value="$PROJECT_DIR$/app/lanceConfig.xml" />
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/LancerLanceBundle.php" />
-        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Config/BigBrother.php" />
-        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/DefaultController.php" />
-        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/DbConnection.php" />
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbsctractModelInterface.php" />
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/MagicObject.php" />
+        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Config/BigBrother.php" />
+        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/DbConnection.php" />
+        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractModel.php" />
+        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/DefaultController.php" />
       </list>
     </option>
   </component>
@@ -215,7 +182,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -339,6 +305,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -346,7 +313,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../kimberly-clark/source" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -409,24 +376,24 @@
     <frame x="-1" y="31" width="1922" height="1053" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2683706" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2657082" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="MagicentoScripts" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39978677" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39978677" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -438,11 +405,11 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/DefaultController.php</url>
-          <line>12</line>
-          <option name="timeStamp" value="3" />
+          <line>13</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="8" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="app_dev.php">
@@ -472,6 +439,66 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../poortvliet/source/src/get.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1440056888184" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1440056888184" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1440056888184" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#141#276#0#PHP" expanded="false" />
+            <marker date="1447058293238" expanded="true" signature="398:411" placeholder="SELECT * FRO..." />
+            <marker date="1447058293238" expanded="true" signature="398:412" placeholder="SELECT * FRO..." />
+            <marker date="1447058293238" expanded="true" signature="398:435" placeholder="SELECT * FRO..." />
+            <marker date="1447058293238" expanded="true" signature="398:436" placeholder="SELECT * FRO..." />
+            <marker date="1447058293238" expanded="true" signature="398:452" placeholder="SELECT * FRO..." />
+            <marker date="1447058293238" expanded="true" signature="398:453" placeholder="SELECT * FRO..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/DbConnection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Config/BigBrother.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lanceConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Config/lanceConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -486,7 +513,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -504,6 +530,7 @@
             <element signature="e#1899#2019#0#PHP" expanded="false" />
             <element signature="e#2025#2265#0#PHP" expanded="false" />
             <element signature="e#2271#2465#0#PHP" expanded="false" />
+            <element signature="e#2471#2636#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -512,7 +539,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -520,7 +546,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -548,6 +573,7 @@
             <element signature="e#1899#2019#0#PHP" expanded="false" />
             <element signature="e#2025#2265#0#PHP" expanded="false" />
             <element signature="e#2271#2465#0#PHP" expanded="false" />
+            <element signature="e#2471#2636#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -556,7 +582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -564,7 +589,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -582,7 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -590,7 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -608,7 +630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -616,7 +637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -687,13 +707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/PDO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="146.07408">
-          <caret line="436" column="0" selection-start-line="436" selection-start-column="0" selection-end-line="436" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.5124434">
@@ -705,7 +718,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0625">
           <caret line="2" column="55" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -713,7 +725,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.089701">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -721,7 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -729,7 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41650295">
           <caret line="120" column="9" selection-start-line="120" selection-start-column="9" selection-end-line="120" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -737,7 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.20235756">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -745,7 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2475442">
           <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -753,7 +760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -761,7 +767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.77013755">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -774,20 +779,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/bootstrap.php.cache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.035714">
-          <caret line="3076" column="0" selection-start-line="3076" selection-start-column="0" selection-end-line="3076" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Config/BigBrother.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.0">
-          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+        <state vertical-scroll-proportion="-6.035714">
+          <caret line="3076" column="0" selection-start-line="3076" selection-start-column="0" selection-end-line="3076" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -800,44 +797,96 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../poortvliet/source/src/get.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <marker date="1440056888184" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1440056888184" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1440056888184" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../poortvliet/source/src/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <marker date="1440056887000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1440056887000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1440056887000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1440056887000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1440056887000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1440056887000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1440056887000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Debug/DebugClassLoader.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5925927">
+        <state vertical-scroll-proportion="0.0">
           <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/DefaultController.php">
+    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Config/BigBrother.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#49#90#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-7.962963">
+          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/PDO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3478261">
+          <caret line="127" column="10" selection-start-line="127" selection-start-column="10" selection-end-line="127" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/DbConnection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state vertical-scroll-proportion="-10.666667">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.3333333">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="-2.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#141#276#0#PHP" expanded="false" />
+            <marker date="1447058293238" expanded="true" signature="398:411" placeholder="SELECT * FRO..." />
+            <marker date="1447058293238" expanded="true" signature="398:412" placeholder="SELECT * FRO..." />
+            <marker date="1447058293238" expanded="true" signature="398:435" placeholder="SELECT * FRO..." />
+            <marker date="1447058293238" expanded="true" signature="398:436" placeholder="SELECT * FRO..." />
+            <marker date="1447058293238" expanded="true" signature="398:452" placeholder="SELECT * FRO..." />
+            <marker date="1447058293238" expanded="true" signature="398:453" placeholder="SELECT * FRO..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.6666665">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="e#49#90#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/MagicObject.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.333334">
-          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.39292732">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding>
             <element signature="e#191#529#0#PHP" expanded="false" />
             <element signature="e#535#1138#0#PHP" expanded="false" />
@@ -848,34 +897,7 @@
             <element signature="e#1899#2019#0#PHP" expanded="false" />
             <element signature="e#2025#2265#0#PHP" expanded="false" />
             <element signature="e#2271#2465#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../poortvliet/source/src/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <marker date="1440056887000" expanded="true" signature="1059:1105" placeholder="..." />
-            <marker date="1440056887000" expanded="true" signature="1106:1529" placeholder="..." />
-            <marker date="1440056887000" expanded="false" signature="1120:1168" placeholder="..." />
-            <marker date="1440056887000" expanded="true" signature="1169:1348" placeholder="..." />
-            <marker date="1440056887000" expanded="false" signature="1182:1281" placeholder="..." />
-            <marker date="1440056887000" expanded="true" signature="1282:1342" placeholder="..." />
-            <marker date="1440056887000" expanded="true" signature="1351:1523" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../poortvliet/source/src/get.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.106090374">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <marker date="1440056888184" expanded="true" signature="1045:1091" placeholder="..." />
-            <marker date="1440056888184" expanded="true" signature="1105:1166" placeholder="..." />
-            <marker date="1440056888184" expanded="true" signature="1179:1291" placeholder="..." />
+            <element signature="e#2471#2636#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -125,3 +125,7 @@
 127.0.0.1 - - [06/Nov/2015:15:29:31 +0200] "GET /app_dev.php/hello HTTP/1.1" 500 52990 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36"
 127.0.0.1 - - [06/Nov/2015:15:29:57 +0200] "GET /favicon.ico HTTP/1.1" 200 6818 "http://symfony.local/app_dev.php/hello" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36"
 127.0.0.1 - - [06/Nov/2015:15:29:57 +0200] "GET /app_dev.php/_wdt/4175be HTTP/1.1" 200 8333 "http://symfony.local/app_dev.php/hello" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36"
+127.0.0.1 - - [09/Nov/2015:10:40:21 +0200] "GET / HTTP/1.1" 200 2153 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36"
+127.0.0.1 - - [09/Nov/2015:10:40:30 +0200] "GET /hello HTTP/1.1" 500 743 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36"
+127.0.0.1 - - [09/Nov/2015:10:41:03 +0200] "GET /hello HTTP/1.1" 500 743 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36"
+127.0.0.1 - - [09/Nov/2015:10:41:09 +0200] "GET /favicon.ico HTTP/1.1" 200 6819 "http://symfony.local/hello" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36"
