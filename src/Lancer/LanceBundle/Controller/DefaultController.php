@@ -12,6 +12,9 @@ class DefaultController extends Controller
     public function indexAction()
     {
         $a = new AbstractModel('test', 'id');
-        $b = $a->load(1);
+        $a->load(1);
+        $a->setName('Valera');
+        $a->delete();
+        $a->save();
     }
 }

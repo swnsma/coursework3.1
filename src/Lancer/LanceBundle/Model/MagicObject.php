@@ -84,7 +84,7 @@ abstract class MagicObject
     public function setOriginData($key, $value = null)
     {
         if (is_array($key)) {
-            $this->_originData = array_merge($this->_originData, $value);
+            $this->_originData = array_merge($this->_originData, $key);
         } else {
             $this->_originData[$key] = $value;
         }
