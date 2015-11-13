@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc3acd54-c1cc-4e5c-84c3-9b49d789f361" name="Default" comment="" />
+    <list default="true" id="bc3acd54-c1cc-4e5c-84c3-9b49d789f361" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Config/install.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/Installer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Config/BigBrother.php" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Config/BigBrother.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Config/lanceConfig.xml" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Config/lanceConfig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractModel.php" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/MagicObject.php" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/MagicObject.php" />
+    </list>
     <ignored path="project.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -22,52 +31,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/DefaultController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5658153">
-              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-              <folding>
-                <element signature="e#49#90#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap.php.cache" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/bootstrap.php.cache">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3076" column="0" selection-start-line="3076" selection-start-column="0" selection-end-line="3076" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClassLoader.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/composer/ClassLoader.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.592592">
-              <caret line="302" column="0" selection-start-line="302" selection-start-column="0" selection-end-line="302" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MagicObject.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/MagicObject.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.518518">
-              <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+            <state vertical-scroll-proportion="-12.148149">
+              <caret line="98" column="29" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
               <folding>
-                <element signature="e#191#529#0#PHP" expanded="false" />
-                <element signature="e#535#1138#0#PHP" expanded="false" />
-                <element signature="e#1144#1300#0#PHP" expanded="false" />
-                <element signature="e#1306#1543#0#PHP" expanded="false" />
-                <element signature="e#1549#1751#0#PHP" expanded="false" />
-                <element signature="e#1757#1893#0#PHP" expanded="false" />
-                <element signature="e#1899#2019#0#PHP" expanded="false" />
-                <element signature="e#2269#2463#0#PHP" expanded="false" />
+                <element signature="e#191#313#0#PHP" expanded="false" />
+                <element signature="e#318#656#0#PHP" expanded="false" />
+                <element signature="e#662#1265#0#PHP" expanded="false" />
+                <element signature="e#1271#1427#0#PHP" expanded="false" />
+                <element signature="e#1433#1670#0#PHP" expanded="false" />
+                <element signature="e#1676#1878#0#PHP" expanded="false" />
+                <element signature="e#1884#2020#0#PHP" expanded="false" />
+                <element signature="e#2026#2146#0#PHP" expanded="false" />
+                <element signature="e#2152#2244#0#PHP" expanded="false" />
+                <element signature="e#2460#2557#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -76,29 +55,48 @@
       <file leaf-file-name="AbstractModel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.259259">
-              <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+            <state vertical-scroll-proportion="-5.3333335">
+              <caret line="126" column="77" selection-start-line="126" selection-start-column="77" selection-end-line="126" selection-end-column="77" />
               <folding>
-                <element signature="e#949#1019#0#PHP" expanded="false" />
-                <element signature="e#1025#1116#0#PHP" expanded="false" />
-                <marker date="1447341876327" expanded="true" signature="719:772" placeholder="SELECT * FRO..${$this-&gt;mainTable}..." />
-                <marker date="1447341876327" expanded="true" signature="2216:2228" placeholder="DELETE FROM ..." />
-                <marker date="1447341876327" expanded="true" signature="2216:2229" placeholder="DELETE FROM ..." />
-                <marker date="1447341876327" expanded="true" signature="2216:2251" placeholder="DELETE FROM ..." />
-                <marker date="1447341876327" expanded="true" signature="2216:2252" placeholder="DELETE FROM ..." />
-                <marker date="1447341876327" expanded="true" signature="2216:2276" placeholder="DELETE FROM ..." />
-                <marker date="1447341876327" expanded="true" signature="2979:2991" placeholder="INSERT INTO ${$this}..." />
-                <marker date="1447341876327" expanded="true" signature="2979:2992" placeholder="INSERT INTO $..." />
-                <marker date="1447341876327" expanded="true" signature="2979:2998" placeholder="INSERT INTO ${$this}..." />
-                <marker date="1447341876327" expanded="true" signature="2979:3010" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
-                <marker date="1447341876327" expanded="true" signature="2979:3011" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
-                <marker date="1447341876327" expanded="true" signature="2979:3026" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
-                <marker date="1447341876327" expanded="true" signature="2979:3027" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
-                <marker date="1447341876327" expanded="true" signature="2979:3057" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
-                <marker date="1447341876327" expanded="true" signature="2979:3058" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
-                <marker date="1447341876327" expanded="true" signature="2979:3059" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
-                <marker date="1447341876327" expanded="true" signature="2979:3068" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
+                <element signature="e#516#649#0#PHP" expanded="false" />
+                <marker date="1447405639460" expanded="true" signature="857:910" placeholder="SELECT * FRO..${$this-&gt;mainTable}..." />
+                <marker date="1447405639460" expanded="true" signature="2532:2544" placeholder="DELETE FROM ..." />
+                <marker date="1447405639460" expanded="true" signature="2532:2545" placeholder="DELETE FROM ..." />
+                <marker date="1447405639460" expanded="true" signature="2532:2567" placeholder="DELETE FROM ..." />
+                <marker date="1447405639460" expanded="true" signature="2532:2568" placeholder="DELETE FROM ..." />
+                <marker date="1447405639460" expanded="true" signature="2532:2592" placeholder="DELETE FROM ..." />
+                <marker date="1447405639460" expanded="true" signature="3374:3386" placeholder="INSERT INTO ${$this}..." />
+                <marker date="1447405639460" expanded="true" signature="3374:3387" placeholder="INSERT INTO $..." />
+                <marker date="1447405639460" expanded="true" signature="3374:3393" placeholder="INSERT INTO ${$this}..." />
+                <marker date="1447405639460" expanded="true" signature="3374:3405" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
+                <marker date="1447405639460" expanded="true" signature="3374:3406" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
+                <marker date="1447405639460" expanded="true" signature="3374:3421" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
+                <marker date="1447405639460" expanded="true" signature="3374:3422" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
+                <marker date="1447405639460" expanded="true" signature="3374:3452" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
+                <marker date="1447405639460" expanded="true" signature="3374:3453" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
+                <marker date="1447405639460" expanded="true" signature="3374:3454" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
+                <marker date="1447405639460" expanded="true" signature="3374:3463" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Installer.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/Installer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.59375">
+              <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="install.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Config/install.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-22.666666">
+              <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -119,37 +117,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BigBrother.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Config/BigBrother.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lanceConfig.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/lanceConfig.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="lanceConfig.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Config/lanceConfig.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+            <state vertical-scroll-proportion="-1.3333334">
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BigBrother.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Config/BigBrother.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.333333">
+              <caret line="41" column="47" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -167,11 +158,14 @@
         <option value="$PROJECT_DIR$/app/lanceConfig.xml" />
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/LancerLanceBundle.php" />
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbsctractModelInterface.php" />
-        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Config/BigBrother.php" />
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/DbConnection.php" />
+        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Config/install.xml" />
+        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Config/BigBrother.php" />
+        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Config/lanceConfig.xml" />
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/MagicObject.php" />
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractModel.php" />
-        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/Installer.php" />
       </list>
     </option>
   </component>
@@ -219,6 +213,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -341,8 +337,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -350,7 +344,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../brova" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../kimberly-clark/source" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -419,25 +413,25 @@
     <frame x="-1" y="31" width="1922" height="1053" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27103302" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2736954" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32870865" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3276414" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="MagicentoScripts" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3991462" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3991462" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -486,28 +480,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/DbConnection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="e#43#84#0#PHP" expanded="true" />
-            <element signature="e#257#441#0#PHP" expanded="false" />
-            <element signature="e#447#980#0#PHP" expanded="false" />
-            <element signature="e#986#1060#0#PHP" expanded="false" />
-            <element signature="e#1066#1648#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Config/BigBrother.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/lanceConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -546,14 +518,16 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
-            <element signature="e#191#529#0#PHP" expanded="false" />
-            <element signature="e#535#1138#0#PHP" expanded="false" />
-            <element signature="e#1144#1300#0#PHP" expanded="false" />
-            <element signature="e#1306#1543#0#PHP" expanded="false" />
-            <element signature="e#1549#1751#0#PHP" expanded="false" />
-            <element signature="e#1757#1893#0#PHP" expanded="false" />
-            <element signature="e#1899#2019#0#PHP" expanded="false" />
-            <element signature="e#2269#2463#0#PHP" expanded="false" />
+            <element signature="e#191#313#0#PHP" expanded="false" />
+            <element signature="e#318#656#0#PHP" expanded="false" />
+            <element signature="e#662#1265#0#PHP" expanded="false" />
+            <element signature="e#1271#1427#0#PHP" expanded="false" />
+            <element signature="e#1433#1670#0#PHP" expanded="false" />
+            <element signature="e#1676#1878#0#PHP" expanded="false" />
+            <element signature="e#1884#2020#0#PHP" expanded="false" />
+            <element signature="e#2026#2146#0#PHP" expanded="false" />
+            <element signature="e#2152#2244#0#PHP" expanded="false" />
+            <element signature="e#2460#2557#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -587,14 +561,16 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#191#529#0#PHP" expanded="false" />
-            <element signature="e#535#1138#0#PHP" expanded="false" />
-            <element signature="e#1144#1300#0#PHP" expanded="false" />
-            <element signature="e#1306#1543#0#PHP" expanded="false" />
-            <element signature="e#1549#1751#0#PHP" expanded="false" />
-            <element signature="e#1757#1893#0#PHP" expanded="false" />
-            <element signature="e#1899#2019#0#PHP" expanded="false" />
-            <element signature="e#2269#2463#0#PHP" expanded="false" />
+            <element signature="e#191#313#0#PHP" expanded="false" />
+            <element signature="e#318#656#0#PHP" expanded="false" />
+            <element signature="e#662#1265#0#PHP" expanded="false" />
+            <element signature="e#1271#1427#0#PHP" expanded="false" />
+            <element signature="e#1433#1670#0#PHP" expanded="false" />
+            <element signature="e#1676#1878#0#PHP" expanded="false" />
+            <element signature="e#1884#2020#0#PHP" expanded="false" />
+            <element signature="e#2026#2146#0#PHP" expanded="false" />
+            <element signature="e#2152#2244#0#PHP" expanded="false" />
+            <element signature="e#2460#2557#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -784,14 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Config/lanceConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/lanceConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -821,19 +789,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Config/BigBrother.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/cache/prod/classes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5265226">
           <caret line="2007" column="0" selection-start-line="2007" selection-start-column="0" selection-end-line="2007" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -842,6 +801,13 @@
         <state vertical-scroll-proportion="0.3497053">
           <caret line="980" column="20" selection-start-line="980" selection-start-column="20" selection-end-line="980" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../kimberly-clark/source/src/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.106090374">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -859,86 +825,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../kimberly-clark/source/src/index.php">
+    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Config/lanceConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.106090374">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <marker date="1446125725774" expanded="true" signature="1041:1087" placeholder="..." />
-            <marker date="1446125725774" expanded="true" signature="1101:1149" placeholder="..." />
-            <marker date="1446125725774" expanded="true" signature="1162:1261" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/composer/ClassLoader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.592592">
-          <caret line="302" column="0" selection-start-line="302" selection-start-column="0" selection-end-line="302" selection-end-column="0" />
+        <state vertical-scroll-proportion="-1.3333334">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/MagicObject.php">
+    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.518518">
-          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.53125">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <element signature="e#191#529#0#PHP" expanded="false" />
-            <element signature="e#535#1138#0#PHP" expanded="false" />
-            <element signature="e#1144#1300#0#PHP" expanded="false" />
-            <element signature="e#1306#1543#0#PHP" expanded="false" />
-            <element signature="e#1549#1751#0#PHP" expanded="false" />
-            <element signature="e#1757#1893#0#PHP" expanded="false" />
-            <element signature="e#1899#2019#0#PHP" expanded="false" />
-            <element signature="e#2269#2463#0#PHP" expanded="false" />
+            <element signature="e#49#90#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/bootstrap.php.cache">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.029850746">
           <caret line="3076" column="0" selection-start-line="3076" selection-start-column="0" selection-end-line="3076" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/ClassLoader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03125">
+          <caret line="302" column="0" selection-start-line="302" selection-start-column="0" selection-end-line="302" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.259259">
-          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+        <state vertical-scroll-proportion="-5.3333335">
+          <caret line="126" column="77" selection-start-line="126" selection-start-column="77" selection-end-line="126" selection-end-column="77" />
           <folding>
-            <element signature="e#949#1019#0#PHP" expanded="false" />
-            <element signature="e#1025#1116#0#PHP" expanded="false" />
-            <marker date="1447341876327" expanded="true" signature="719:772" placeholder="SELECT * FRO..${$this-&gt;mainTable}..." />
-            <marker date="1447341876327" expanded="true" signature="2216:2228" placeholder="DELETE FROM ..." />
-            <marker date="1447341876327" expanded="true" signature="2216:2229" placeholder="DELETE FROM ..." />
-            <marker date="1447341876327" expanded="true" signature="2216:2251" placeholder="DELETE FROM ..." />
-            <marker date="1447341876327" expanded="true" signature="2216:2252" placeholder="DELETE FROM ..." />
-            <marker date="1447341876327" expanded="true" signature="2216:2276" placeholder="DELETE FROM ..." />
-            <marker date="1447341876327" expanded="true" signature="2979:2991" placeholder="INSERT INTO ${$this}..." />
-            <marker date="1447341876327" expanded="true" signature="2979:2992" placeholder="INSERT INTO $..." />
-            <marker date="1447341876327" expanded="true" signature="2979:2998" placeholder="INSERT INTO ${$this}..." />
-            <marker date="1447341876327" expanded="true" signature="2979:3010" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
-            <marker date="1447341876327" expanded="true" signature="2979:3011" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
-            <marker date="1447341876327" expanded="true" signature="2979:3026" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
-            <marker date="1447341876327" expanded="true" signature="2979:3027" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
-            <marker date="1447341876327" expanded="true" signature="2979:3057" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
-            <marker date="1447341876327" expanded="true" signature="2979:3058" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
-            <marker date="1447341876327" expanded="true" signature="2979:3059" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
-            <marker date="1447341876327" expanded="true" signature="2979:3068" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
+            <element signature="e#516#649#0#PHP" expanded="false" />
+            <marker date="1447405639460" expanded="true" signature="857:910" placeholder="SELECT * FRO..${$this-&gt;mainTable}..." />
+            <marker date="1447405639460" expanded="true" signature="2532:2544" placeholder="DELETE FROM ..." />
+            <marker date="1447405639460" expanded="true" signature="2532:2545" placeholder="DELETE FROM ..." />
+            <marker date="1447405639460" expanded="true" signature="2532:2567" placeholder="DELETE FROM ..." />
+            <marker date="1447405639460" expanded="true" signature="2532:2568" placeholder="DELETE FROM ..." />
+            <marker date="1447405639460" expanded="true" signature="2532:2592" placeholder="DELETE FROM ..." />
+            <marker date="1447405639460" expanded="true" signature="3374:3386" placeholder="INSERT INTO ${$this}..." />
+            <marker date="1447405639460" expanded="true" signature="3374:3387" placeholder="INSERT INTO $..." />
+            <marker date="1447405639460" expanded="true" signature="3374:3393" placeholder="INSERT INTO ${$this}..." />
+            <marker date="1447405639460" expanded="true" signature="3374:3405" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
+            <marker date="1447405639460" expanded="true" signature="3374:3406" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
+            <marker date="1447405639460" expanded="true" signature="3374:3421" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
+            <marker date="1447405639460" expanded="true" signature="3374:3422" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
+            <marker date="1447405639460" expanded="true" signature="3374:3452" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
+            <marker date="1447405639460" expanded="true" signature="3374:3453" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
+            <marker date="1447405639460" expanded="true" signature="3374:3454" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
+            <marker date="1447405639460" expanded="true" signature="3374:3463" placeholder="INSERT INTO ${$this-&gt;_mainTable}..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/DefaultController.php">
+    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/MagicObject.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5658153">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        <state vertical-scroll-proportion="-12.148149">
+          <caret line="98" column="29" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
           <folding>
-            <element signature="e#49#90#0#PHP" expanded="true" />
+            <element signature="e#191#313#0#PHP" expanded="false" />
+            <element signature="e#318#656#0#PHP" expanded="false" />
+            <element signature="e#662#1265#0#PHP" expanded="false" />
+            <element signature="e#1271#1427#0#PHP" expanded="false" />
+            <element signature="e#1433#1670#0#PHP" expanded="false" />
+            <element signature="e#1676#1878#0#PHP" expanded="false" />
+            <element signature="e#1884#2020#0#PHP" expanded="false" />
+            <element signature="e#2026#2146#0#PHP" expanded="false" />
+            <element signature="e#2152#2244#0#PHP" expanded="false" />
+            <element signature="e#2460#2557#0#PHP" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Config/BigBrother.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.333333">
+          <caret line="41" column="47" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Config/install.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.666666">
+          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/Installer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59375">
+          <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>

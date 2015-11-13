@@ -7,6 +7,13 @@ abstract class MagicObject
     private $_originData = array();
     private static $_underscoreCache = array();
 
+    /**
+     * Change requested field name to underscore type.
+     *
+     * @param $name
+     *
+     * @return string
+     */
     protected function _underscore($name)
     {
         if (isset(self::$_underscoreCache[$name])) {
@@ -81,15 +88,28 @@ abstract class MagicObject
         return $this->getData($var);
     }
 
+    /**
+     * Set origin data.
+     *
+     * @param      $key
+     * @param null $value
+     */
     public function setOriginData($key, $value = null)
     {
         if (is_array($key)) {
-            $this->_originData = array_merge($this->_originData, $key);
+            $this->_originData = $key;
         } else {
             $this->_originData[$key] = $value;
         }
     }
 
+    /**
+     * Return origin data.
+     *
+     * @param null $key
+     *
+     * @return array
+     */
     public function getOriginData($key = null)
     {
         if (is_null($key)) {
@@ -99,6 +119,13 @@ abstract class MagicObject
         }
     }
 
+    /**
+     * Detect data changing.
+     *
+     * @param $key
+     *
+     * @return bool
+     */
     public function dataChanged($key)
     {
         if ($this->_data[$key] != $this->_originData[$key]) {

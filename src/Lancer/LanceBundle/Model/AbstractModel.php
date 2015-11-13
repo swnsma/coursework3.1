@@ -21,6 +21,14 @@ class AbstractModel extends MagicObject
         $this->_afterLoad();
     }
 
+    /**
+     * Load record from the table.
+     *
+     * @param      $value
+     * @param null $field
+     *
+     * @return $this
+     */
     protected function _load($value, $field = null)
     {
         if (is_null($field)) {
@@ -46,6 +54,9 @@ class AbstractModel extends MagicObject
         $this->setData($this->getOriginData());
     }
 
+    /**
+     * Detect changes in model. Don't save unchanged model.
+     */
     protected function _detectChanges()
     {
         $keys = array_keys($this->getData());
@@ -88,12 +99,18 @@ class AbstractModel extends MagicObject
 
     }
 
+    /**
+     * Set delete flag.
+     */
     public function delete()
     {
         $this->isDeleted = true;
         $this->hasChanges = true;
     }
 
+    /**
+     * Delete record from the table.
+     */
     protected function _executeDeleteProcess()
     {
         $STH = DbConnection::getInstance()
@@ -102,9 +119,12 @@ class AbstractModel extends MagicObject
         $STH->execute(array("value" => $this->getId()));
     }
 
+    /**
+     * Save data.
+     */
     protected function _executeSaveProcess()
     {
-        $data = $this->getData();
+        $data = array_intersect_key($this->getData(), $this->getOriginData());
         $keys = array_keys($data);
         $keysIns = implode(',', $keys);
         $keysUpd = implode('=?,', $keys);
