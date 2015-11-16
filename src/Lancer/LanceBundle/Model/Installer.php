@@ -2,6 +2,7 @@
 namespace Lancer\LanceBundle;
 
 use Lancer\LanceBundle\Config\BigBrother;
+use Lancer\LanceBundle\Model\DbConnection;
 
 class Installer
 {
@@ -26,6 +27,7 @@ class Installer
         if (version_compare($installNode->version, $this->version) >= 0 ) {
             foreach ($installNode->content as $task) {
                 $query = $this->_formatTask($task);
+                DbConnection::getInstance()->getConnection()->query($query);
             }
         }
     }
@@ -35,7 +37,7 @@ class Installer
         $sql = '';
         if (!empty($task->create)) {
             $sql .= 'CREATE ' .
-                $task->exist ? 'IF NOT EXISTS' : '' .
+                $task->exist ? ' IF NOT EXISTS' : '' .
                 strtoupper($task->create) . ' ' . $task->name .'(';
             foreach ($task->fields as $field) {
                 $rows[] = $this->_formatRow($field);
@@ -45,22 +47,31 @@ class Installer
 
         } elseif($task->drop) {
             $sql .= 'DROP ' .
-                $task->exist ? 'IF EXISTS ': '' .
+                $task->exist ? ' IF EXISTS ': '' .
                 strtoupper($task->drop) . ' ' . $task->name . ';';
         } elseif($task->alter) {
-            $sql .= 'ALTER' . strtoupper($task->alter) . ' ' . $task->action;
+            $sql .= 'ALTER TABLE ' . strtoupper($task->name) . ' ' . $this->_alter($task->alter, $task->action);
+        }
+
+        return $sql;
+    }
+
+    protected function _alter($type, $action)
+    {
+        switch ($type) {
+            case "add":
         }
     }
 
     protected function _formatRow($field)
     {
-        $str = $field->title . ' ' .
-            $field->type .
-            $field->size?'(' . $field->size .')': '' .
-            $field->a_i?' AUTO_INCREMENT ':'' .
-            $field->primary?' PRIMARY KEY ':''.
-            $field->nulls?' NULL ':' NOT NULL ' .
-            $field->default?' DEFAULT ' . $field->default . ' ':'';
+        return $str = $field->title . ' ' .
+        $field->type .
+        $field->size ? '(' . $field->size . ')' : '' .
+        $field->a_i ? ' AUTO_INCREMENT ' : '' .
+        $field->primary ? ' PRIMARY KEY ' : '' .
+        $field->nulls ? ' NULL ' : ' NOT NULL ' .
+        $field->default ? ' DEFAULT ' . $field->default . ' ' : '';
     }
 
 }

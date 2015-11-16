@@ -31,8 +31,11 @@
                 <name>test</name>
             </task>
             <task>
-                <alter>table</alter>
-                <name></name>
+                <alter>add</alter>
+                <name>table_name</name>
+                <action>
+                    <target></target>
+                </action>
             </task>
         </content>
     </install>
