@@ -8,6 +8,9 @@ final class BigBrother
     const CONFIG_NAME = 'lanceConfig.xml';
     const INSTALL_NAME = 'install.xml';
 
+    /**
+     * @var \SimpleXMLElement
+     */
     private static $configTree = null;
 
     public static function getConfig()
@@ -17,6 +20,11 @@ final class BigBrother
         }
 
         return self::$configTree;
+    }
+
+    public static function updateConfig($config)
+    {
+        self::$configTree = $config;
     }
 
     private static function initConfig()
@@ -40,6 +48,14 @@ final class BigBrother
         } else {
             $xml = file_get_contents($filePath);
             return new \SimpleXMLElement($xml);
+        }
+    }
+
+    public static function saveConfig()
+    {
+        $filePath = getcwd() . self::CONFIG_FOLDER . self::CONFIG_NAME;
+        if (!empty(self::$configTree)) {
+            file_put_contents($filePath, self::$configTree->asXml(), "w" );
         }
     }
 }

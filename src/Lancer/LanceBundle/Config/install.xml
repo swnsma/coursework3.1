@@ -1,42 +1,142 @@
 <installs>
     <install>
         <version>0.0.1</version>
-        <content>
+        <tasks>
             <task>
-                <create>table</create>
-                <name>table_name</name>
-                <fields>
-                    <field>
-                        <title>id</title>
-                        <type>int</type>
-                        <primary>1</primary>
-                        <nulls>0</nulls>
-                        <a_i>1</a_i>
-                    </field>
-                    <field>
-                        <title>name</title>
-                        <type>varchar</type>
-                        <size>255</size>
-                        <nulls>1</nulls>
-                    </field>
-                    <field>
-                        <title>age</title>
-                        <type>int</type>
-                        <nulls>1</nulls>
-                    </field>
-                </fields>
+                <![CDATA[
+                CREATE TABLE medicine (
+                id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+                title varchar(50),
+                description text,
+                contraindications varchar(250)
+                );
+                ]]>
             </task>
             <task>
-                <drop>table</drop>
-                <name>test</name>
+                <![CDATA[
+                CREATE TABLE disease (
+                id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+                title varchar(50),
+                description text,
+                photo varchar(50)
+                );
+                ]]>
             </task>
             <task>
-                <alter>add</alter>
-                <name>table_name</name>
-                <action>
-                    <target></target>
-                </action>
+                <![CDATA[
+                CREATE TABLE service (
+                id int NOT NOLL PRIMARY KEY AUTO_INCREMENT,
+                title varchar(50),
+                description text,
+                price decimal(10,5)
+                );
+                ]]>
             </task>
-        </content>
+            <task>
+                <![CDATA[
+                CREATE TABLE patient (
+                id int NOT NULL PRIMARY_KEY AUTO_INCREMENT,
+                name varchar(50),
+                second_name varchar(50),
+                referee_name varchar(50),
+                referee_photo varchar(50),
+                patient_photo varchar(50),
+                social_security_number varchar(50),
+                );
+                ]]>
+            </task>
+            <task>
+                <![CDATA[
+                CREATE TABLE role (
+                id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+                title varchar(50)
+                );
+                ]]>
+            </task>
+            <task>
+                <![CDATA[
+                CREATE TABLE acl (
+                id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+                route varchar(50)
+                );
+                ]]>
+            </task>
+            <task>
+                <![CDATA[
+                CREATE TABLE role_acl (
+                role_id int NOT NULL,
+                acl_id int NOT NULL,
+                PRIMARY KEY (role_id, acl_id),
+                CONSTRAINT perRole FOREIGN KEY (role_id) REFERENCES role(id) ON DELETE CASCADE ON UPDATE CASCADE,
+                CONSTRAINT perAcl FOREIGN KEY (acl_id) REFERENCES acl(id) ON DELETE CASCADE ON UPDATE CASCADE
+                );
+                ]]>
+            </task>
+            <task>
+            <![CDATA[
+            CREATE TABLE user (
+            id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+            name varchar(50),
+            second_name varchar(50),
+            role_id NOT NULL,
+            photo varchar(100),
+            CONSTRAINT perRole FOREIGN KEY (role_id) REFERENCES role(id) ON DELETE CASCADE ON UPDATE CASCADE
+            );
+            ]]>
+            </task>
+            <task>
+                <![CDATA[
+                CREATE TABLE service_patient (
+                service_id INT NOT NULL,
+                patient_id INT NOT NULL,
+                user_id INT NOT NULL,
+                date DATETIME,
+                PRIMARY KEY(service_id, patient_id, user_id),
+                CONSTRAINT perService FOREIGN KEY (service_id) REFERENCES service(id) ON DELETE CASCADE ON UPDATE CASCADE,
+                CONSTRAINT perPatient FOREIGN KEY (patient_id) REFERENCES patient(id) ON DELETE CASCADE ON UPDATE CASCADE,
+                CONSTRAINT perUser FOREIGN KEY (user_id) REFERENCES user(id) ON DELETE CASCADE ON UPDATE CASCADE
+                );
+                ]]>
+            </task>
+            <task>
+                <![CDATA[
+                CREATE TABLE patient_disease (
+                patient_id INT NOT NULL,
+                disease_id INT NOT NULL,
+                illness_start DATETIME,
+                illness_end DATETIME,
+                healthy TINYINT,
+                PRIMARY KEY (patient_id, disease_id),
+                CONSTRAINT perPatient FOREIGN KEY (patient_id) REFERENCES patient(id) ON DELETE CASCADE ON UPDATE CASCADE,
+                CONSTRAINT perDisease FOREIGN KEY (disease_id) REFERENCES disease(id) ON DELETE CASCADE ON UPDATE CASCADE
+                );
+                ]]>
+            </task>
+            <task>
+                <![CDATA[
+                CREATE TABLE medicine_disease (
+                medicine_id INT NOT NULL,
+                disease_id INT NOT NULL,
+                effective INT,
+                PRIMARY KEY (medicine_id, disease_id),
+                CONSTRAINT perMedicine FOREIGN KEY (medicine_id) REFERENCES medicine(id) ON DELETE CASCADE ON UPDATE CASCADE,
+                CONSTRAINT perDisease FOREIGN KEY (disease_id) REFERENCES disease(id) ON DELETE CASCADE ON UPDATE CASCADE
+                );
+                ]]>
+            </task>
+            <task>
+                <![CDATA[
+                CREATE TABLE patient_medicine (
+                patient_id INT NOT NULL,
+                medicine_id INT NOT NULL,
+                start_date DATETIME,
+                end_date DATETIME,
+                PRIMARY KEY(patient_id, medicine_id),
+                CONSTRAINT perMedicine FOREIGN KEY (medicine_id) REFERENCES medicine(id) ON DELETE CASCADE ON UPDATE CASCADE,
+                CONSTRAINT perPatient FOREIGN KEY (patient_id) REFERENCES patient(id) ON DELETE CASCADE ON UPDATE CASCADE
+                );
+                ]]>
+            </task>
+        </tasks>
     </install>
 </installs>
