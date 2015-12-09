@@ -1,12 +1,14 @@
 <?php
 namespace Lancer\LanceBundle\Model;
 
-class AbstractModel extends MagicObject
+abstract class AbstractModel extends MagicObject
 {
     protected $_mainTable;
     protected $_primary;
     private $hasChanges = false;
     private $isDeleted = false;
+    protected $_references = array();
+
 
     public function __construct($mainTable, $primary)
     {
@@ -90,6 +92,7 @@ class AbstractModel extends MagicObject
             $this->_save();
             $this->hasChanges = false;
         }
+        $this->_afterSave();
 
         return $this;
     }

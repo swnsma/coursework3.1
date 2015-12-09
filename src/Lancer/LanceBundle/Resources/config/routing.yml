@@ -1,3 +1,64 @@
-lancer_lance_homepage:
+lancer_lance_install:
     path:     /install
     defaults: { _controller: LancerLanceBundle:Install:index }
+
+lance_authorization:
+    path: /login
+    defaults: { _controller: LancerLanceBundle:Authorization:index }
+
+lance_remind_password:
+    path: /remind
+    defaults: { _controller: LancerLanceBundle:Authorization:remind }
+    requirements:
+            _method:  POST
+
+lance_reset_password:
+    path: /reset/{hash}
+    defaults: { _controller: LancerLanceBundle:Authorization:reset }
+lance_save_reset_password:
+    path: /reset
+    defaults: { _controller: LancerLanceBundle:Authorization:saveReset }
+    requirements:
+            _method: POST
+
+home:
+    path: /
+    defaults: { _controller: LancerLanceBundle:Home:index }
+
+lance_forgetpassword:
+    path: /forgetpassword
+    defaults: {_controller: LancerLanceBundle:Authorization:forget }
+
+lance_403:
+    path: /forbidden
+    defaults: { _controller: LancerLanceBundle:Forbidden:index }
+
+lance_lancer_install_process:
+    path: /installs
+    defaults: { _controller: LancerLanceBundle:Install:save }
+    requirements:
+            _method:  POST
+
+lance_registration:
+    path: /registration
+    defaults: { _controller: LancerLanceBundle:Authorization:registration }
+    requirements:
+        _method: POST
+
+lance_newaccount:
+    path: /newaccount
+    defaults: { _controller: LancerLanceBundle:Authorization:newaccount }
+
+lance_logout:
+    path: /logout
+    defaults: { _controller: LancerLanceBundle:Authorization:logout }
+
+lance_myaccount:
+    path: /myaccount
+    defaults: { _controller:LancerLanceBundle:User:myaccount }
+
+lance_login:
+    path: /logintry
+    defaults: { _controller: LancerLanceBundle:Authorization:login }
+    requirements:
+        _method: POST

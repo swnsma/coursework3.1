@@ -24,7 +24,20 @@ final class BigBrother
 
     public static function updateConfig($config)
     {
-        self::$configTree = $config;
+        if($config instanceof \SimpleXMLElement) {
+            self::$configTree = $config;
+        } elseif(is_array($config)) {
+            $xml = new \SimpleXMLElement('<config></config>');
+            $xml->addChild('version', '0.0.0');
+            $db = $xml->addChild('database');
+            $db->addChild('driver', 'mysql');
+            $db->addChild('host', $config['server']);
+            $db->addChild('port', $config['port']);
+            $db->addChild('schema', $config['schema']);
+            $db->addChild('username', $config['user']);
+            $db->addChild('password', $config['pass']);
+            self::$configTree =$xml;
+        }
     }
 
     private static function initConfig()
@@ -55,7 +68,10 @@ final class BigBrother
     {
         $filePath = getcwd() . self::CONFIG_FOLDER . self::CONFIG_NAME;
         if (!empty(self::$configTree)) {
-            file_put_contents($filePath, self::$configTree->asXml(), "w" );
+            $dom = new \DOMDocument("1.0");
+            $dom->formatOutput = true;
+            $dom->loadXML(self::$configTree->asXML());
+            file_put_contents($filePath, $dom->saveXML());
         }
     }
 }

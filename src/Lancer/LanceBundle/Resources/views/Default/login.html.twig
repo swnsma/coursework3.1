@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+{% block title %}Log in{% endblock %}
+{% block body %}
+    {{ include('header.html.twig') }}
+    <h1>Authorization</h1>
+    <div class="container">
+        {{ include('message.html.twig') }}
+        <div class="center-block">
+            <div class="col-sm-2"></div>
+            <div class="row col-sm-6">
+                <form class="form-horizontal" method="post" action="{{ path('lance_login') }}">
+                    <div class="form-group">
+                        <label class="col-sm-4" for="email">Email: </label>
+                        <div class="col-sm-8">
+                            <input id="email" name="email" required="required" type="text" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4" for="pass">Password:</label>
+                        <div class="col-sm-8">
+                            <input id="pass" name="pass" required="required" type="password" class="form-control" />
+                            <a href="{{ path('lance_newaccount') }}">Create new account?</a>
+                            <a href="{{ path('lance_forgetpassword') }}">Forgot password?</a>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-8">
+                            <input type="submit" class="btn btn-info"/>
+                            <input type="reset" class="btn btn-danger"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

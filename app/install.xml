@@ -1,0 +1,173 @@
+<installs>
+    <install>
+        <version>0.0.1</version>
+        <tasks>
+            <task>
+                CREATE TABLE IF NOT EXISTS medicine (
+                id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+                title varchar(50),
+                description text,
+                contraindications varchar(250)
+                );
+            </task>
+            <task>
+                CREATE TABLE IF NOT EXISTS disease (
+                id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+                title varchar(50),
+                description text,
+                photo varchar(50)
+                );
+            </task>
+            <task>
+                CREATE TABLE IF NOT EXISTS service (
+                id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+                title varchar(50),
+                description text,
+                price decimal(10,5)
+                );
+            </task>
+            <task>
+                CREATE TABLE IF NOT EXISTS patient (
+                id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+                name varchar(50),
+                second_name varchar(50),
+                referee_name varchar(50),
+                referee_photo varchar(50),
+                patient_photo varchar(50),
+                social_security_number varchar(50)
+                );
+            </task>
+            <task>
+                CREATE TABLE IF NOT EXISTS role (
+                id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+                title varchar(50)
+                );
+            </task>
+            <task>
+                CREATE TABLE IF NOT EXISTS acl (
+                id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+                route varchar(50)
+                );
+            </task>
+            <task>
+                CREATE TABLE IF NOT EXISTS role_acl (
+                role_id int NOT NULL,
+                acl_id int NOT NULL,
+                PRIMARY KEY (role_id, acl_id),
+                CONSTRAINT perRole FOREIGN KEY (role_id) REFERENCES role(id) ON DELETE CASCADE ON UPDATE CASCADE,
+                CONSTRAINT perAcl FOREIGN KEY (acl_id) REFERENCES acl(id) ON DELETE CASCADE ON UPDATE CASCADE
+                );
+            </task>
+            <task>
+            CREATE TABLE IF NOT EXISTS user (
+            id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+            name varchar(50),
+            second_name varchar(50),
+            role_id int NOT NULL,
+            photo varchar(100),
+            CONSTRAINT perUserRole FOREIGN KEY (role_id) REFERENCES role(id) ON DELETE CASCADE ON UPDATE CASCADE
+            );
+            </task>
+            <task>
+                CREATE TABLE IF NOT EXISTS service_patient (
+                service_id INT NOT NULL,
+                patient_id INT NOT NULL,
+                user_id INT NOT NULL,
+                date DATETIME,
+                PRIMARY KEY(service_id, patient_id, user_id),
+                CONSTRAINT perServicePatient FOREIGN KEY (service_id) REFERENCES service(id) ON DELETE CASCADE ON UPDATE CASCADE,
+                CONSTRAINT perPatientService FOREIGN KEY (patient_id) REFERENCES patient(id) ON DELETE CASCADE ON UPDATE CASCADE,
+                CONSTRAINT perUserPatientService FOREIGN KEY (user_id) REFERENCES user(id) ON DELETE CASCADE ON UPDATE CASCADE
+                );
+            </task>
+            <task>
+                CREATE TABLE IF NOT EXISTS patient_disease (
+                patient_id INT NOT NULL,
+                disease_id INT NOT NULL,
+                illness_start DATETIME,
+                illness_end DATETIME,
+                healthy TINYINT,
+                PRIMARY KEY (patient_id, disease_id),
+                CONSTRAINT perPatientDisease FOREIGN KEY (patient_id) REFERENCES patient(id) ON DELETE CASCADE ON UPDATE CASCADE,
+                CONSTRAINT perDiseasePatient FOREIGN KEY (disease_id) REFERENCES disease(id) ON DELETE CASCADE ON UPDATE CASCADE
+                );
+            </task>
+            <task>
+                CREATE TABLE IF NOT EXISTS medicine_disease (
+                medicine_id INT NOT NULL,
+                disease_id INT NOT NULL,
+                effective INT,
+                PRIMARY KEY (medicine_id, disease_id),
+                CONSTRAINT perMedicineDisease FOREIGN KEY (medicine_id) REFERENCES medicine(id) ON DELETE CASCADE ON UPDATE CASCADE,
+                CONSTRAINT perDiseaseMedicine FOREIGN KEY (disease_id) REFERENCES disease(id) ON DELETE CASCADE ON UPDATE CASCADE
+                );
+            </task>
+            <task>
+                CREATE TABLE IF NOT EXISTS patient_medicine (
+                patient_id INT NOT NULL,
+                medicine_id INT NOT NULL,
+                start_date DATETIME,
+                end_date DATETIME,
+                PRIMARY KEY(patient_id, medicine_id),
+                CONSTRAINT perMedicinePatient FOREIGN KEY (medicine_id) REFERENCES medicine(id) ON DELETE CASCADE ON UPDATE CASCADE,
+                CONSTRAINT perPatientMedicine FOREIGN KEY (patient_id) REFERENCES patient(id) ON DELETE CASCADE ON UPDATE CASCADE
+                );
+            </task>
+        </tasks>
+    </install>
+    <install>
+        <version>0.0.2</version>
+        <tasks>
+            <task>
+                ALTER TABLE  `user` ADD  `email` VARCHAR( 50 ) NOT NULL AFTER  `photo` ,
+                ADD INDEX (`email`) ;
+            </task>
+            <task>ALTER TABLE `user` ADD `password` VARCHAR(50) NOT NULL</task>
+            <task>
+                INSERT INTO `role`(title) VALUES ('admin');
+            </task>
+            <task>
+                INSERT INTO `role`(title) VALUES ('base');
+            </task>
+            <task>
+                INSERT INTO `user`(name, second_name, email, role_id) VALUES ('Alexandr', 'Kravchuk', 'swnsma@gmail.com', 1);
+            </task>
+            <task>
+                INSERT INTO `acl` (`route`) VALUES ("lancer_lance_install", "home");
+            </task>
+            <task>
+                INSERT INTO `role_acl` (`role_id`, `acl_id`) VALUES (1, 1), (1, 2), (2, 2);
+            </task>
+            <task>
+                CREATE TABLE `secret`(
+                user_id INT NOT NULL PRIMARY KEY,
+                hash varchar(50),
+                CONSTRAINT userHash FOREIGN KEY (user_id) REFERENCES user(id) ON DELETE CASCADE ON UPDATE CASCADE
+                )
+            </task>
+            <task>
+                delimiter //
+                CREATE TRIGGER generateHash AFTER INSERT ON user
+                FOR EACH ROW
+                BEGIN
+                    INSERT INTO `secret` VALUES (NEW.id, MD5(UNIX_TIMESTAMP()));
+                END;
+                //
+                delimiter ;
+            </task>
+            <task>
+                delimiter //
+                CREATE TRIGGER generateNewHash BEFORE UPDATE ON user
+                FOR EACH ROW
+                    BEGIN
+                        SELECT password INTO @password FROM user WHERE id = NEW.id;
+                        IF @password != NEW.password THEN
+                            INSERT INTO `secret` VALUES (NEW.id, MD5(UNIX_TIMESTAMP())) ON DUPLICATE KEY UPDATE `hash`= MD5(UNIX_TIMESTAMP());
+                        END IF;
+                    END;
+                //
+                delimiter ;
+            </task>
+        </tasks>
+    </install>
+</installs>

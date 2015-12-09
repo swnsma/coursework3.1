@@ -1,0 +1,16 @@
+{% block header %}
+    <div class="header">
+        <div class="col-sm-2">
+            <img class="head" src="{{ asset('vendor/lancer/img/manticora_head.png') }}"/>
+        </div>
+        {% if user is defined and user.name  %}
+            <div class="header-user col-sm-7">
+                <a href="{{ path('lance_myaccount') }}">{{ user.name }} {{ user.secondName }}</a>
+                <a href="{{ path('lance_logout') }}"><img class="header-button-off" src="{{ asset('vendor/lancer/img/logout.jpg') }}"></a>
+            </div>
+            <div class="col-sm-1"></div>
+            {% else %}
+            <div class="header-user col-sm-7"><a href="{{ path('lance_authorization') }}">Log In</a></div>
+        {% endif %}
+    </div>
+{% endblock %}

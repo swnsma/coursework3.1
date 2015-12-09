@@ -49,7 +49,7 @@ abstract class MagicObject
             return $this->_data;
         }
 
-        return $this->_data[$key];
+        return isset($this->_data[$key])?$this->_data[$key]:null;
     }
 
     public function setData($key, $value = null)
