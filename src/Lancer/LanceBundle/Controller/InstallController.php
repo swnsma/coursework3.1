@@ -1,5 +1,6 @@
 <?php
 namespace Lancer\LanceBundle\Controller;
+
 use Lancer\LanceBundle\Config\BigBrother;
 use Lancer\LanceBundle\Model\Installer;
 use Symfony\Component\Config\Definition\Exception\Exception;
@@ -13,7 +14,7 @@ class InstallController extends BaseController
         $config = BigBrother::getConfig();
         if (empty($config)) {
             return $this->render('LancerLanceBundle:Default:install.html.twig', array(
-                'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..')));
+                'base_dir' => realpath($this->container->getParameter('kernel.root_dir') . '/..')));
         }
         $this->check();
         $installer = new Installer();

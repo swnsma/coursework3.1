@@ -18,8 +18,7 @@ class BaseController extends Controller
         }
         $userId = $session->get('userId');
         $route = $request->get('_route');
-        if (!$session->has($route))
-        {
+        if (!$session->has($route)) {
             $acl = new Acl();
             $session->set($route, $acl->check($route, $userId));
         }
@@ -41,6 +40,7 @@ class BaseController extends Controller
 
         return $message;
     }
+
     public function getUserDataHeader(Session $session)
     {
         if (!$session->has('userId')) {

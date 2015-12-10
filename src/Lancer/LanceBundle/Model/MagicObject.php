@@ -20,7 +20,7 @@ abstract class MagicObject
             return self::$_underscoreCache[$name];
         }
 
-        $result                        = strtolower(preg_replace("/(.)([A-Z])/", "$1_$2", $name));
+        $result = strtolower(preg_replace("/(.)([A-Z])/", "$1_$2", $name));
         self::$_underscoreCache[$name] = $result;
 
         return $result;
@@ -29,7 +29,7 @@ abstract class MagicObject
     public function __call($name, $args)
     {
         $callType = substr($name, 0, 3);
-        $key      = $this->_underscore(substr($name, 3));
+        $key = $this->_underscore(substr($name, 3));
         switch ($callType) {
             case 'get':
                 return $this->getData($key);
@@ -49,7 +49,7 @@ abstract class MagicObject
             return $this->_data;
         }
 
-        return isset($this->_data[$key])?$this->_data[$key]:null;
+        return isset($this->_data[$key]) ? $this->_data[$key] : null;
     }
 
     public function setData($key, $value = null)

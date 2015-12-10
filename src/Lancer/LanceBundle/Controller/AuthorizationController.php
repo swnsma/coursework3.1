@@ -1,5 +1,6 @@
 <?php
 namespace Lancer\LanceBundle\Controller;
+
 use Lancer\LanceBundle\Model\User;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -13,9 +14,9 @@ class AuthorizationController extends BaseController
      */
     public function indexAction(Request $request)
     {
-        if(!$request->getSession()->has('userId')) {
+        if (!$request->getSession()->has('userId')) {
             return $this->render('LancerLanceBundle:Default:login.html.twig', array(
-                'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
+                'base_dir' => realpath($this->container->getParameter('kernel.root_dir') . '/..'),
                 'message' => $this->getMessage($request->getSession())));
         }
         return $this->redirectToRoute('home');
@@ -30,10 +31,10 @@ class AuthorizationController extends BaseController
     public function newaccountAction(Request $request)
     {
         $session = $request->getSession();
-        if(!$session->has('userId')) {
+        if (!$session->has('userId')) {
 
             return $this->render('LancerLanceBundle:Default:newaccount.html.twig', array(
-                'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
+                'base_dir' => realpath($this->container->getParameter('kernel.root_dir') . '/..'),
                 'message' => $this->getMessage($request->getSession())));
         }
         return $this->redirectToRoute('home');
@@ -91,11 +92,11 @@ class AuthorizationController extends BaseController
      */
     public function remindAction(Request $request)
     {
-        if(!$request->getSession()->has('userId')) {
+        if (!$request->getSession()->has('userId')) {
             $data = $request->request->all();
             $user = new User();
             $user->load($data['email'], 'email');
-            if($user->getId()){
+            if ($user->getId()) {
                 $message = \Swift_Message::newInstance()
                     ->setSubject('Forget Password')
                     ->setFrom('swnsma@gmail.com')
@@ -126,10 +127,10 @@ class AuthorizationController extends BaseController
         $user = new User();
         $user->loadByHash($hash);
         if ($user->getId()) {
-           return $this->render('LancerLanceBundle:Default:reset.html.twig', array(
-               'message' => $this->getMessage($request->getSession()),
-               'hash' => $hash
-           ));
+            return $this->render('LancerLanceBundle:Default:reset.html.twig', array(
+                'message' => $this->getMessage($request->getSession()),
+                'hash' => $hash
+            ));
         }
 
         return $this->redirectToRoute('home');
@@ -161,9 +162,9 @@ class AuthorizationController extends BaseController
      */
     public function forgetAction(Request $request)
     {
-        if(!$request->getSession()->has('userId')) {
+        if (!$request->getSession()->has('userId')) {
             return $this->render('LancerLanceBundle:Default:forgetpassword.html.twig', array(
-                'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
+                'base_dir' => realpath($this->container->getParameter('kernel.root_dir') . '/..'),
                 'message' => $this->getMessage($request->getSession())));
         }
         return $this->redirectToRoute('home');

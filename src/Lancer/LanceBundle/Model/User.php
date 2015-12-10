@@ -17,7 +17,7 @@ class User extends AbstractModel
             return true;
         }
 
-        if(!empty($this->getData('email'))) {
+        if (!empty($this->getData('email'))) {
             $sth = DbConnection::getInstance()->getConnection()->prepare("SELECT $this->_primary FROM $this->_mainTable WHERE `email` = ?");
             $sth->execute(array($this->getData('email')));
             $result = $sth->fetch();
@@ -32,11 +32,11 @@ class User extends AbstractModel
     public function getSecretHash()
     {
         $result = '';
-        if($this->getId()) {
+        if ($this->getId()) {
             $sth = DbConnection::getInstance()->getConnection()->prepare("SELECT `hash` FROM `secret` WHERE `user_id` = ?");
             $sth->execute(array($this->getId()));
             $result = $sth->fetch();
-            if(!empty($result)) {
+            if (!empty($result)) {
                 $result = $result['hash'];
             }
         }
@@ -50,7 +50,7 @@ class User extends AbstractModel
             $sth->execute(array($hash));
             $row = $sth->fetch();
             if (!empty($row)) {
-               $this->load($row['user_id']);
+                $this->load($row['user_id']);
             }
         }
         return $this;

@@ -2,38 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc3acd54-c1cc-4e5c-84c3-9b49d789f361" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/Acl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/AuthorizationController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/BaseController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/ForbiddenController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/HomeController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/User.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/User.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/vendor/lancer/css/base.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Default/forbidden.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Default/forgetpassword.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Emails/forgetpassword.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/header.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/vendor/lancer/css/home.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Default/home.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/install.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Default/login.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/message.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Default/newaccount.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Default/reset.html.twig" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/DefaultController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Default/index.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Tests/Controller/DefaultControllerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/User.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractCollection.php" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractCollection.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractModel.php" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Config/BigBrother.php" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Config/BigBrother.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/AuthorizationController.php" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/AuthorizationController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/BaseController.php" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/BaseController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/DbConnection.php" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/DbConnection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/ForbiddenController.php" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/ForbiddenController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/HomeController.php" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/HomeController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/InstallController.php" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/InstallController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/Installer.php" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/Installer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/MagicObject.php" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/MagicObject.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Default/install.html.twig" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Default/install.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lanceConfig.xml" afterPath="$PROJECT_DIR$/app/lanceConfig.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/User.php" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Emails/forgetpassword.html.twig" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Emails/forgetpassword.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="project.iws" />
@@ -56,93 +36,101 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AuthorizationController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/AuthorizationController.php">
+      <file leaf-file-name="ForbiddenController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/ForbiddenController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.033333335">
-              <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
-              <folding>
-                <element signature="e#47#81#0#PHP" expanded="true" />
-                <element signature="e#375#798#0#PHP" expanded="false" />
-                <element signature="e#997#1460#0#PHP" expanded="false" />
-                <element signature="e#2312#3008#0#PHP" expanded="false" />
-                <element signature="e#3014#3166#0#PHP" expanded="false" />
-                <element signature="e#3171#4222#0#PHP" expanded="false" />
-                <element signature="e#4228#4452#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.4444447">
-              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-              <folding>
-                <marker date="1449687631320" expanded="true" signature="496:559" placeholder="SELECT ${$th..." />
-                <marker date="1449687631320" expanded="true" signature="944:991" placeholder="SELECT `hash..." />
-                <marker date="1449687631320" expanded="true" signature="1361:1402" placeholder="SELECT user_..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reset.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Default/reset.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.3333335">
-              <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+            <state vertical-scroll-proportion="-8.333333">
+              <caret line="15" column="37" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="newaccount.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Default/newaccount.html.twig">
+      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/HomeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.333333">
+              <caret line="15" column="15" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InstallController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/InstallController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.6666665">
+              <caret line="20" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractModel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.6666667">
+              <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractCollection.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractCollection.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.6666665">
+              <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Acl.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/Acl.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.0">
+              <caret line="19" column="44" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DbConnection.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/DbConnection.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.3333335">
+              <caret line="48" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="54" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Installer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/Installer.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-4.0">
-              <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="42" />
+              <caret line="35" column="11" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forgetpassword.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Emails/forgetpassword.html.twig">
+      <file leaf-file-name="MagicObject.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/MagicObject.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.6666667">
-              <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
+            <state vertical-scroll-proportion="-6.3333335">
+              <caret line="41" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="136" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forgetpassword.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Default/forgetpassword.html.twig">
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.3333333">
-              <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.666667">
-              <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/config/routing.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.4">
-              <caret line="4" column="19" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="19" />
+            <state vertical-scroll-proportion="2.2">
+              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -156,7 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/Resource/Resource.php" />
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/Resource/AbstractResource.php" />
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/Resource/Interface/Resource.php" />
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/Resource/Interfaces/Resource.php" />
@@ -164,7 +151,6 @@
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Config/GlobalConfig.php" />
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/LancerLanceBundle.php" />
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbsctractModelInterface.php" />
-        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/DbConnection.php" />
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Config/lanceConfig.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Config/install.xml" />
@@ -180,33 +166,35 @@
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/Acl.php" />
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Default/longin.html.twig" />
         <option value="$PROJECT_DIR$/app/lanceConfig.xml" />
-        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/MagicObject.php" />
         <option value="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Request.php" />
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/User.php" />
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Default/install.html.twig" />
-        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractModel.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/message.html.twig" />
-        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/ForbiddenController.php" />
-        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/HomeController.php" />
         <option value="$PROJECT_DIR$/web/vendor/lancer/css/home.css" />
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Default/newaccount.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/header.html.twig" />
         <option value="$PROJECT_DIR$/web/vendor/lancer/css/base.css" />
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Default/home.html.twig" />
-        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/InstallController.php" />
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Default/login.html.twig" />
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Default/forbidden.html.twig" />
         <option value="$PROJECT_DIR$/app/bootstrap.php.cache" />
-        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/BaseController.php" />
-        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractCollection.php" />
-        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Emails/forgetpassword.html.twig" />
         <option value="$PROJECT_DIR$/app/install.xml" />
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Default/forgetpassword.html.twig" />
-        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/User.php" />
-        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/AuthorizationController.php" />
         <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Default/reset.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Emails/forgetpassword.html.twig" />
+        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/User.php" />
+        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/BaseController.php" />
+        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/AuthorizationController.php" />
+        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/ForbiddenController.php" />
+        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/HomeController.php" />
+        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/InstallController.php" />
+        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractModel.php" />
+        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractCollection.php" />
+        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/DbConnection.php" />
+        <option value="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/MagicObject.php" />
       </list>
     </option>
   </component>
@@ -673,6 +661,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="coursework3.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="coursework3.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -787,7 +793,19 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="58" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/AuthorizationController.php</url>
+          <line>104</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/AuthorizationController.php</url>
+          <line>97</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="63" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="tbl_sql.php">
@@ -803,6 +821,7 @@
         <watch expression="self::$_connection" />
         <watch expression="$e" />
         <watch expression="$request-&gt;get('hash')" language="PHP" />
+        <watch expression="$this-&gt;getId()" />
       </configuration>
       <configuration name="get_scripts.js.php">
         <watch expression="self::$_connection" />
@@ -860,20 +879,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Debug/ErrorHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4444447">
-          <caret line="560" column="0" selection-start-line="560" selection-start-column="0" selection-end-line="560" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/ResponseHeaderBag.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7777777">
-          <caret line="105" column="20" selection-start-line="105" selection-start-column="20" selection-end-line="105" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Config/BigBrother.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34690553">
@@ -943,16 +948,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/vendor/lancer/img/manticora.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/vendor/lancer/img/forbidden.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/favicon.ico">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -973,27 +968,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/MagicObject.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="20.0">
-          <caret line="51" column="65" selection-start-line="51" selection-start-column="65" selection-end-line="51" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/Installer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.333334">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/DbConnection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.666667">
-          <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/vendor/lancer/img/logout.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1003,20 +977,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/Acl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3333334">
-          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/ForbiddenController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1059,56 +1019,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/BaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.4444444">
-          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-          <folding>
-            <element signature="e#917#1164#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.0">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/share/phpmyadmin/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35833332">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="22.666666">
-          <caret line="87" column="26" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="26" />
-          <folding>
-            <marker date="1449353560420" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1449353560420" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1449353560420" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractCollection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1153,14 +1067,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/InstallController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.14444445">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.666667">
@@ -1169,26 +1075,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Emails/forgetpassword.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6666667">
-          <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Default/forgetpassword.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.3333333">
           <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Default/newaccount.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.0">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -1212,22 +1102,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/User.php">
+    <entry file="file:///usr/share/phpmyadmin/tbl_structure.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4444447">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <marker date="1449687631320" expanded="true" signature="496:559" placeholder="SELECT ${$th..." />
-            <marker date="1449687631320" expanded="true" signature="944:991" placeholder="SELECT `hash..." />
-            <marker date="1449687631320" expanded="true" signature="1361:1402" placeholder="SELECT user_..." />
-          </folding>
+        <state vertical-scroll-proportion="0.35833332">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/vendor/lancer/img/forbidden.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/vendor/lancer/img/manticora.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/vendor/lancer/img/manticora_head.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.4">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="19" />
+        <state vertical-scroll-proportion="-8.4">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Default/newaccount.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.0">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -1240,27 +1157,116 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/share/phpmyadmin/tbl_structure.php">
+    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Emails/forgetpassword.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35833332">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state vertical-scroll-proportion="-1.3333334">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/BaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.6666665">
+          <caret line="23" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="50" selection-end-column="1" />
+          <folding>
+            <element signature="e#909#1156#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/AuthorizationController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.033333335">
-          <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+        <state vertical-scroll-proportion="-7.111111">
+          <caret line="103" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="183" selection-end-column="1" />
           <folding>
-            <element signature="e#47#81#0#PHP" expanded="true" />
-            <element signature="e#375#798#0#PHP" expanded="false" />
-            <element signature="e#997#1460#0#PHP" expanded="false" />
-            <element signature="e#2312#3008#0#PHP" expanded="false" />
-            <element signature="e#3014#3166#0#PHP" expanded="false" />
-            <element signature="e#3171#4222#0#PHP" expanded="false" />
-            <element signature="e#4228#4452#0#PHP" expanded="false" />
+            <element signature="e#48#82#0#PHP" expanded="true" />
+            <element signature="e#376#802#0#PHP" expanded="false" />
+            <element signature="e#1001#1467#0#PHP" expanded="false" />
+            <element signature="e#2319#3015#0#PHP" expanded="false" />
+            <element signature="e#3021#3173#0#PHP" expanded="false" />
+            <element signature="e#4238#4462#0#PHP" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/ForbiddenController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.333333">
+          <caret line="15" column="37" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.333333">
+          <caret line="15" column="15" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/InstallController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.6666665">
+          <caret line="20" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.6666667">
+          <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractCollection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.6666665">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/Acl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.0">
+          <caret line="19" column="44" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/DbConnection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.3333335">
+          <caret line="48" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="54" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/Installer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.0">
+          <caret line="35" column="11" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/MagicObject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.3333335">
+          <caret line="41" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="136" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.2">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

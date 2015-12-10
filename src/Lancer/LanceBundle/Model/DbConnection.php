@@ -21,7 +21,7 @@ final class DbConnection
     private function __construct()
     {
         try {
-            $settings          = self::getConfigToConnectionString();
+            $settings = self::getConfigToConnectionString();
             self::$_connection = new \PDO($settings['string'], $settings['username'], $settings['password']);
             self::$_connection->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
             self::$_connection->setAttribute(\PDO::ATTR_DEFAULT_FETCH_MODE, \PDO::FETCH_ASSOC);
@@ -30,13 +30,14 @@ final class DbConnection
         }
     }
 
-    public function getConnection() {
+    public function getConnection()
+    {
         return self::$_connection;
     }
 
     private function getConfigToConnectionString()
     {
-        $config   = BigBrother::getConfig();
+        $config = BigBrother::getConfig();
         $dbConfig = $config->database;
 
         $connectionString = (string)$dbConfig->driver
@@ -46,7 +47,7 @@ final class DbConnection
             . (string)$dbConfig->schema;
 
         return array(
-            'string'   => $connectionString,
+            'string' => $connectionString,
             'username' => (string)$dbConfig->username,
             'password' => (string)$dbConfig->password
         );

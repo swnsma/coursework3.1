@@ -13,7 +13,7 @@ abstract class AbstractModel extends MagicObject
     public function __construct($mainTable, $primary)
     {
         $this->_mainTable = $mainTable;
-        $this->_primary   = $primary;
+        $this->_primary = $primary;
     }
 
     final public function load($value, $field = null)
