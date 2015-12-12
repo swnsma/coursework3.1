@@ -1,0 +1,23 @@
+service_homepage:
+    path:     /service/{id}
+    defaults: { _controller: ServiceBundle:Service:index, id: 1 }
+service_edit:
+    path:     /service_edit/{id}
+    defaults: { _controller: ServiceBundle:Service:edit, id: 1 }
+service_delete:
+    path:     /service_delete/{id}
+    defaults: { _controller: ServiceBundle:Service:delete, id: empty }
+service_new:
+    path:     /service_new
+    defaults: { _controller: ServiceBundle:Service:new }
+service_save:
+    path:   /service_save
+    defaults: {_controller: ServiceBundle:Service:save}
+    requirements:
+            _method: POST
+services_list:
+    path:   /services
+    defaults: { _controller: ServiceBundle:ServiceList:index }
+services_load:
+    path:   /services_load
+    defaults: { _controller: ServiceBundle:ServiceList:load }

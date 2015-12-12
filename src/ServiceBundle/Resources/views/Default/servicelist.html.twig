@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/manticora/service/css/servicelist.css') }}"/>
+{% endblock %}
+{% block title %}Services{% endblock %}
+{% block body %}
+    {{ include('header.html.twig') }}
+    <h1>Services</h1>
+    <div class="container">
+        <div class="wrapper" >
+            <div class="search">
+                <label>Search:<input type="search" data-bind="value: query, valueUpdate: 'keyup'"/></label>
+                <a href="{{ path('service_new') }}"><button class="btn btn-info">Add new</button></a>
+            </div>
+
+            <div class="table" data-bind="foreach: services">
+                <div class="tr" data-bind="click: openDisease">
+                    <div class="td">
+                        <span class="bold">Title:</span>
+                        <span data-bind="text: title"></span>
+                    </div>
+                    <div class="td">
+                        <span class="bold">Price:</span>
+                        <span data-bind="text: price"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('vendor/knockout/knockout-3.4.0.js') }}"></script>
+    <script src="{{ asset('vendor/manticora/service/js/servicelist/API.js') }}"></script>
+    <script src="{{ asset('vendor/manticora/service/js/servicelist/viewModel.js') }}"></script>
+{% endblock %}

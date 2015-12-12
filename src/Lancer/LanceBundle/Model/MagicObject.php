@@ -128,7 +128,7 @@ abstract class MagicObject
      */
     public function dataChanged($key)
     {
-        if ($this->_data[$key] != $this->_originData[$key]) {
+        if (isset($this->_originData[$key]) && $this->_data[$key] == $this->_originData[$key]) {
             return false;
         }
 

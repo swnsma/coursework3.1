@@ -77,6 +77,7 @@ class AuthorizationController extends BaseController
             $request->getSession()->set('userId', $user->getId());
             $request->getSession()->set('userName', $user->getName());
             $request->getSession()->set('userSName', $user->getSecondName());
+            $request->getSession()->set('userRole', $user->getRoleId());
             return $this->redirectToRoute('home');
 
         }

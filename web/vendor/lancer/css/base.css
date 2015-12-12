@@ -10,6 +10,7 @@ div.header-user {
 }
 .header img.head{
     height: 50px;
+    margin-top: -10px;
 }
 h1 {
     margin-top: 0;

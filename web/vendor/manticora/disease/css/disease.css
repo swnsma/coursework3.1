@@ -1,0 +1,9 @@
+.disease-img {
+    float: left;
+    max-width: 200px;
+    max-height: 200px;
+    margin: 0 30px 30px 0;
+}
+.btns{
+    float: right;
+}

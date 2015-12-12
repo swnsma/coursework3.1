@@ -18,6 +18,10 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
             new Lancer\LanceBundle\LancerLanceBundle(),
+            new UserBundle\UserBundle(),
+            new PatientBundle\PatientBundle(),
+            new DiseaseBundle\DiseaseBundle(),
+            new ServiceBundle\ServiceBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

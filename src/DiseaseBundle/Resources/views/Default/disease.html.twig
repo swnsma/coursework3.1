@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block title %}Disease{% endblock %}
+{% block body %}
+    {{ include('header.html.twig') }}
+    <h1>Disease</h1>
+    <div class="back"><a href="{{ path('disease_list') }}">Back to list</a></div>
+    <div class="container">
+        {% if user.role == 1 %}
+            <div class="btns">
+                <a href="{{ path('disease_edit', {id: disease.id}) }}"><button class="btn btn-info">Edit</button></a>
+                <a href="{{ path('disease_delete', {id: disease.id}) }}"><button class="btn btn-danger">Remove</button></a>
+            </div>
+        {% endif %}
+        <div>
+            <h2>{{ disease.title }}</h2>
+        </div>
+        <div>
+            <img class="disease-img" src="{{ disease.photo }}" />
+            <p>{{ disease.description | raw}}</p>
+        </div>
+    </div>
+{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/manticora/disease/css/disease.css') }}"
+{% endblock %}

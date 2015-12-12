@@ -30,6 +30,16 @@ class BaseController extends Controller
         return true;
     }
 
+    public function generate404($session, $target)
+    {
+        $response = $this->render('LancerLanceBundle:Default:notfound.html.twig', array(
+            'user' => $this->getUserDataHeader($session),
+            'target' => $target));
+
+        $response->setStatusCode(404);
+        return $response;
+    }
+
     public function getMessage(Session $session)
     {
         $message = null;
@@ -46,6 +56,6 @@ class BaseController extends Controller
         if (!$session->has('userId')) {
             return null;
         }
-        return ['name' => $session->get('userName'), 'secondName' => $session->get('userSName')];
+        return ['name' => $session->get('userName'), 'secondName' => $session->get('userSName'), 'role' => $session->get('userRole')];
     }
 }

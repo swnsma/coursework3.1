@@ -1,0 +1,23 @@
+patient_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: PatientBundle:Default:index }
+
+patient_list:
+    path: /patient_list
+    default: { _controller: PatientBundle:PatientList:index }
+
+patient_delete:
+    path: /patient_delete
+    default: { _controller: PatientBundle:PatientPage:delete }
+
+patient_edit:
+    path: /patient_edit
+    default: { _controller: PatientBundle:PatientPage:edit }
+
+patient_new:
+    path: /patient_new
+    default: { _controller: PatientBundle:PatientPage:new }
+
+patient_save_edit
+    path: /patient_save_edit
+    default: { _controller: PatientBundle:PatientPage:save }

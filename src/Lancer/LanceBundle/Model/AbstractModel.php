@@ -127,7 +127,7 @@ abstract class AbstractModel extends MagicObject
      */
     protected function _executeSaveProcess()
     {
-        $data = array_intersect_key($this->getData(), $this->getOriginData());
+        $data = $this->getData();
         $keys = array_keys($data);
         $keysIns = implode(',', $keys);
         $keysUpd = implode('=?,', $keys);
@@ -150,5 +150,8 @@ abstract class AbstractModel extends MagicObject
         $STH = DbConnection::getInstance()
             ->getConnection()->prepare($query);
         $STH->execute($values);
+        if (!$this->getId()){
+        $this->setId(DbConnection::getInstance()->getConnection()->lastInsertId());
+        }
     }
 }

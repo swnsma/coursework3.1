@@ -8,6 +8,7 @@ class User extends AbstractModel
         parent::__construct('user', 'id');
         if (!is_null($data)) {
             $this->setData($data);
+            $this->setOriginData($data);
         }
     }
 

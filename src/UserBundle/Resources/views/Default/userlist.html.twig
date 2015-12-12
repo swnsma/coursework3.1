@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/manticora/user/css/userlist.css') }}"/>
+{% endblock %}
+{% block title %}Users{% endblock %}
+{% block body %}
+    {{ include('header.html.twig') }}
+    <h1>Users</h1>
+    <div class="container">
+        <div class="wrapper" >
+            <div class="search">
+                <label>Search:<input type="search" data-bind="value: query, valueUpdate: 'keyup'"/></label>
+            </div>
+            <div class="table" data-bind="foreach: users">
+                <div class="tr">
+                    <div class="td photo"><img class="user-img" data-bind="attr:{src: photo}"></div>
+                    <div class="td">
+                        <span class="bold">Name:</span>
+                        <span data-bind="text: name"></span>
+                    </div>
+                    <div class="td">
+                        <span class="bold">Email:</span>
+                        <span data-bind="text: email"></span>
+                    </div>
+                    <!--ko ifnot: edit -->
+                    <div class="td">
+                        <span class="bold">Title:</span>
+                        <span data-bind="text: title{% if user.role == 1 %}, click: editRole{% endif %}"></span>
+                    </div>
+                    <!--/ko-->
+                    {% if user.role == 1 %}
+                    <!--ko if: edit -->
+                        <div class="td">
+                            <span class="bold">Title:</span>
+                            <select class="role-select" data-bind="options: roles,
+                                                optionsText: 'title',
+                                                value: newRole">
+                            </select>
+                            <button data-bind="click: submit">Save</button>
+                            <button data-bind="click: reject">Cancel</button>
+                        </div>
+                    <!--/ko-->
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('vendor/knockout/knockout-3.4.0.js') }}"></script>
+    <script src="{{ asset('vendor/manticora/user/js/userlist/API.js') }}"></script>
+    <script src="{{ asset('vendor/manticora/user/js/userlist/viewModel.js') }}"></script>
+{% endblock %}

@@ -4,6 +4,7 @@ namespace Lancer\LanceBundle\Model;
 final class Acl
 {
     static private $acl = array();
+    static protected $_roles = array();
 
     public function check($route, $userId)
     {
@@ -24,5 +25,16 @@ final class Acl
         }
 
         return self::$acl[$userId][$route];
+    }
+
+    static public function getRoles()
+    {
+        if (empty(self::$_roles)) {
+            $sth = DbConnection::getInstance()->getConnection()->prepare('SELECT * FROM role');
+            $sth->execute();
+            self::$_roles = $sth->fetchAll();
+        }
+
+        return self::$_roles;
     }
 }

@@ -1,0 +1,24 @@
+disease_homepage:
+    path:     /disease/{id}
+    defaults: { _controller: DiseaseBundle:Disease:index, id: 1 }
+disease_edit:
+    path:      /disease_edit/{id}
+    defaults: { _controller: DiseaseBundle:Disease:edit, id: 1 }
+
+disease_save:
+    path:       /disease_save
+    defaults: {_controller: DiseaseBundle:Disease:save }
+    requirements:
+                _method: POST
+disease_new:
+    path:       /disease_new
+    defaults:   { _controller: DiseaseBundle:Disease:new }
+diseases_load:
+    path: /diseases_load
+    defaults: { _controller: DiseaseBundle:DiseaseList:load }
+disease_list:
+    path: /diseases
+    defaults: { _controller: DiseaseBundle:DiseaseList:index }
+disease_delete:
+    path: /disease_delete/{id}
+    defaults: {_controller: DiseaseBundle:Disease:delete, id: empty}

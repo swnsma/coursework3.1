@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% block title %}Not Found{% endblock %}
+{% block body %}
+    {{ include('header.html.twig') }}
+<div class="container">
+    <img class="loop" src="{{ asset('vendor/lancer/img/loop.png') }}">
+    <h1>404</h1>
+    <h3>{{ target }} not found</h3>
+    <h4>{{ target }} not found. Please check your information and try again.</h4>
+    <span><a href="">Home page</a></span>
+</div>
+{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/lancer/css/404.css') }}"
+{% endblock %}

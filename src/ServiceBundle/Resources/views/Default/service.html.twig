@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block title %}Service{% endblock %}
+{% block body %}
+    {{ include('header.html.twig') }}
+    <h1>Service</h1>
+    <div class="back"><a href="{{ path('services_list') }}">Back to list</a></div>
+    <div class="container">
+        {% if user.role == 1 %}
+            <div class="btns">
+                <a href="{{ path('service_edit', {id: service.id}) }}"><button class="btn btn-info">Edit</button></a>
+                <a href="{{ path('service_delete', {id: service.id}) }}"><button class="btn btn-danger">Remove</button></a>
+            </div>
+        {% endif %}
+        <div>
+            <h2>{{ service.title }}</h2>
+        </div>
+        <div><p>Price: {{ service.price }}</p></div>
+        <div>
+            <p>{{ service.description | raw}}</p>
+        </div>
+    </div>
+{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/manticora/service/css/service.css') }}"
+{% endblock %}

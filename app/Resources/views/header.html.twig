@@ -1,7 +1,7 @@
 {% block header %}
     <div class="header">
         <div class="col-sm-2">
-            <img class="head" src="{{ asset('vendor/lancer/img/manticora_head.png') }}"/>
+            <a href="{{ path('home') }}"><img class="head" src="{{ asset('vendor/lancer/img/manticora_head.png') }}"/></a>
         </div>
         {% if user is defined and user.name  %}
             <div class="header-user col-sm-7">

@@ -1,0 +1,12 @@
+
+users_lists:
+    path: /userlist
+    defaults: { _controller: UserBundle:UserList:index }
+users_load:
+    path: /usersload
+    defaults: { _controller: UserBundle:UserList:load }
+user_role_save:
+    path: /saveuserrole
+    defaults: { _controller: UserBundle:User:saveRole }
+    requirements:
+                _method: POST
