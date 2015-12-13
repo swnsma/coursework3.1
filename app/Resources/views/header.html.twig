@@ -1,8 +1,19 @@
 {% block header %}
     <div class="header">
-        <div class="col-sm-2">
-            <a href="{{ path('home') }}"><img class="head" src="{{ asset('vendor/lancer/img/manticora_head.png') }}"/></a>
+        <div class="dropdown col-sm-1">
+            {% if user is defined %}
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Menu
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="{{ path('home') }}">Home</a></li>
+                <li><a href="{{ path('users_lists') }}">Users</a></li>
+                <li><a href="{{ path('disease_list') }}">Disease</a></li>
+                <li><a href="{{ path('services_list') }}">Services</a></li>
+                <li><a href="{{ path('patients_list') }}">Patients</a></li>
+            </ul>
+                {% endif %}
         </div>
+
         {% if user is defined and user.name  %}
             <div class="header-user col-sm-7">
                 <a href="{{ path('lance_myaccount') }}">{{ user.name }} {{ user.secondName }}</a>

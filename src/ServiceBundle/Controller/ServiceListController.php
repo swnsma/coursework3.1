@@ -19,7 +19,8 @@ class ServiceListController extends BaseController
     {
         $this->check();
         return $this->render('ServiceBundle:Default:servicelist.html.twig', array(
-            'user' => $this->getUserDataHeader($request->getSession())));
+            'user' => $this->getUserDataHeader($request->getSession()),
+            'new_action' => $this->check('service_new', false)));
     }
 
     /**

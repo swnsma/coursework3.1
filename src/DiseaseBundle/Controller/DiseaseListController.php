@@ -19,7 +19,8 @@ class DiseaseListController extends BaseController
     {
         $this->check();
         return $this->render('DiseaseBundle:Default:diseaselist.html.twig', array(
-            'user' => $this->getUserDataHeader($request->getSession())));
+            'user' => $this->getUserDataHeader($request->getSession()),
+            'new_action' => $this->check('disease_new', false)));
     }
 
     /**

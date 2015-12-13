@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+{% block title %}Disease{% endblock %}
+{% block body %}
+    {{ include('header.html.twig') }}
+    <h1>Patient {{ template_type }}</h1>
+    <div class="container">
+        <div class="center-block">
+            <div class="row col-sm-10">
+                <form class="form-horizontal" method="post" action="{{ path('patient_save') }}">
+                    <h2>Patient</h2>
+                    <input name="id" type="hidden" value="{% if patient is defined %}{{ patient.id }}{% endif %}"/>
+                    <div class="form-group">
+                        <label class="col-sm-4" for="name">Name</label>
+                        <div class="col-sm-8">
+                            <input id="name" name="name" required="required" type="text" class="form-control"
+                                    value="{% if patient is defined %}{{ patient.name }}{% endif %}"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4" for="second_name">Second Name</label>
+                        <div class="col-sm-8">
+                            <input id="second_name" name="second_name" required="required" type="text" class="form-control"
+                                   value="{% if patient is defined %}{{ patient.second_name }}{% endif %}"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4" for="patient_photo">Photo URL</label>
+                        <div class="col-sm-8">
+                            <input id="patient_photo" name="patient_photo" type="text" class="form-control"
+                                   value="{% if patient is defined %}{{ patient.patient_photo }}{% endif %}"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4" for="patient_phone">Phone</label>
+                        <div class="col-sm-8">
+                            <input id="patient_phone" name="patient_phone" type="tel" class="form-control"
+                                   value="{% if patient is defined %}{{ patient.patient_phone }}{% endif %}"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4" for="social_security_number">Social Security Number</label>
+                        <div class="col-sm-8">
+                            <input id="social_security_number" name="social_security_number" type="text" class="form-control"
+                                   value="{% if patient is defined %}{{ patient.social_security_number }}{% endif %}"/>
+                        </div>
+                    </div>
+                    <h2>Referee</h2>
+                    <div class="form-group">
+                        <label class="col-sm-4" for="referee_name">Name</label>
+                        <div class="col-sm-8">
+                            <input id="referee_name" name="referee_name" type="text" class="form-control"
+                                   value="{% if patient is defined %}{{ patient.referee_name }}{% endif %}"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4" for="referee_photo">Photo URL</label>
+                        <div class="col-sm-8">
+                            <input id="referee_photo" name="referee_photo" type="text" class="form-control"
+                                   value="{% if patient is defined %}{{ patient.referee_photo }}{% endif %}"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4" for="referee_phone">Phone</label>
+                        <div class="col-sm-8">
+                            <input id="referee_phone" name="referee_phone" type="tel" class="form-control"
+                                   value="{% if patient is defined %}{{ patient.referee_phone }}{% endif %}"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-8">
+                            <input type="submit" class="btn btn-info"/>
+                            {%  if disease is defined %}
+                            <a href="{{ path('disease_homepage', {id:disease.id}) }}">
+                                {% else %}
+                                <a href="{{ path('disease_list') }}">
+                                    {% endif %}
+                                    <div class="btn btn-danger" >Cancel</div></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/manticora/patient/css/patient.css') }}"
+{% endblock %}

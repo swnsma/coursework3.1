@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+{% block title %}Patient{% endblock %}
+{% block body %}
+    {{ include('header.html.twig') }}
+    <h1>Patient</h1>
+    <div class="back"><a href="{{ path('patients_list') }}">Back to list</a></div>
+    <div class="container">
+        {% if edit_action or delete_action %}
+            <div class="btns">
+                {% if edit_action %} <a href="{{ path('patient_edit', {id: patient.id}) }}"><button class="btn btn-info">Edit</button></a>{% endif %}
+                {% if  delete_action %}<a href="{{ path('patient_delete', {id: patient.id}) }}"><button class="btn btn-danger">Remove</button></a>{% endif %}
+            </div>
+        {% endif %}
+        <div>
+            <h2>Patient: {{ [patient.name, ' ', patient.second_name]|join }}</h2>
+        </div>
+        <div>
+            {% if patient.patient_photo %}
+                <img class="img" src="{{ patient.patient_photo }}"/>
+            {% endif %}
+
+            <div>
+                <span class="bold">Name:</span>
+                <span>{{ patient.name }}</span>
+            </div>
+            <div>
+                <span class="bold">Second Name:</span>
+                <span>{{ patient.second_name }}</span>
+            </div>
+            <div>
+                <span class="bold">Phone:</span>
+                <span>{{ patient.patient_phone|default('Phone did not set') }}</span>
+            </div>
+            <div>
+                <span class="bold">Social Security Number:</span>
+                <span>{{ patient.social_security_number }}</span>
+            </div>
+            <div class="spacer" ></div>
+        </div>
+        <div>
+            <h2>Referee: {{ patient.referee_name }}</h2>
+        </div>
+        <div>
+            {% if patient.referee_photo %}
+                <img class="img" src="{{ patient.referee_photo }}"/>
+            {% endif %}
+            <div>
+                <span class="bold">Name:</span>
+                <span>{{ patient.referee_name }}</span>
+            </div>
+            <div>
+                <span class="bold">Phone:</span>
+                <span>{{ patient.referee_phone|default('Phone did not set') }}</span>
+            </div>
+            <div class="spacer" ></div>
+        </div>
+    </div>
+{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/manticora/patient/css/patient.css') }}"
+{% endblock %}

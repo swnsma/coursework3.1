@@ -16,7 +16,9 @@ class ServiceController extends BaseController
         if ($service->getId()) {
             return $this->render('ServiceBundle:Default:service.html.twig', array(
                 'service' => $service->getData(),
-                'user' => $this->getUserDataHeader($request->getSession())));
+                'user' => $this->getUserDataHeader($request->getSession()),
+                'edit_action' => $this->check('service_edit', false),
+                'delete_action' => $this->check('service_delete', false)));
         }
 
         return $this->generate404($request->getSession(), 'Service');

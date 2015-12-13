@@ -34,6 +34,8 @@
                 referee_name varchar(50),
                 referee_photo varchar(100),
                 patient_photo varchar(100),
+                patient_phone varchar(20),
+                referee_phone varchar(20),
                 social_security_number varchar(50)
                 );
             </task>
@@ -70,11 +72,11 @@
             </task>
             <task>
                 CREATE TABLE IF NOT EXISTS service_patient (
+                id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
                 service_id INT NOT NULL,
                 patient_id INT NOT NULL,
                 user_id INT NOT NULL,
                 date DATETIME,
-                PRIMARY KEY(service_id, patient_id, user_id),
                 CONSTRAINT perServicePatient FOREIGN KEY (service_id) REFERENCES service(id) ON DELETE CASCADE ON UPDATE CASCADE,
                 CONSTRAINT perPatientService FOREIGN KEY (patient_id) REFERENCES patient(id) ON DELETE CASCADE ON UPDATE CASCADE,
                 CONSTRAINT perUserPatientService FOREIGN KEY (user_id) REFERENCES user(id) ON DELETE CASCADE ON UPDATE CASCADE
@@ -82,14 +84,16 @@
             </task>
             <task>
                 CREATE TABLE IF NOT EXISTS patient_disease (
+                id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
                 patient_id INT NOT NULL,
                 disease_id INT NOT NULL,
+                user_id INT NOT NULL,
                 illness_start DATETIME,
                 illness_end DATETIME,
                 healthy TINYINT,
-                PRIMARY KEY (patient_id, disease_id),
                 CONSTRAINT perPatientDisease FOREIGN KEY (patient_id) REFERENCES patient(id) ON DELETE CASCADE ON UPDATE CASCADE,
-                CONSTRAINT perDiseasePatient FOREIGN KEY (disease_id) REFERENCES disease(id) ON DELETE CASCADE ON UPDATE CASCADE
+                CONSTRAINT perDiseasePatient FOREIGN KEY (disease_id) REFERENCES disease(id) ON DELETE CASCADE ON UPDATE CASCADE,
+                CONSTRAINT perUserPatientDisease FOREIGN KEY (user_id) REFERENCES user(id) ON DELETE CASCADE ON UPDATE CASCADE
                 );
             </task>
             <task>

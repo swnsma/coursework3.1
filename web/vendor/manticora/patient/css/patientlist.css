@@ -1,0 +1,39 @@
+.patient-img{
+    float: left;
+    max-width: 50px;
+    max-height: 50px;
+}.table{
+     display: table;
+
+ }
+
+.tr {
+    display: table-row;
+    width: 45%;
+    margin: 10px;
+    float: left;
+    padding: 20px;
+    border: 3px grey solid;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 90px;
+}
+.td{
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.bold{
+    font-weight: 900;
+}
+.search{
+    margin: 20px;
+}
+.search button{
+    float: right;
+}
+.photo{
+    margin-right: 20px;
+    float: left;
+    clear: both;
+}

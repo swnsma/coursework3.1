@@ -10,7 +10,7 @@
         <div class="wrapper" >
             <div class="search">
                 <label>Search:<input type="search" data-bind="value: query, valueUpdate: 'keyup'"/></label>
-                <a href="{{ path('disease_new') }}"><button class="btn btn-info">Add new</button></a>
+                {% if new_action %}<a href="{{ path('disease_new') }}"><button class="btn btn-info">Add new</button></a>{% endif %}
             </div>
 
             <div class="table" data-bind="foreach: diseases">

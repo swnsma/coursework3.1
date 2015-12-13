@@ -4,7 +4,7 @@ function Service(obj)
     for (var val in obj) {
         self[val] = obj[val];
     }
-    self.openDisease = function () {
+    self.openService = function () {
         window.location = 'service/' + self.id;
     };
 }
@@ -17,9 +17,9 @@ function ViewModel()
     that.services = ko.observableArray([]);
     that.search = function(value) {
         that.services.removeAll();
-        for (var disease in that.servicesStatic ) {
-            if (value == '' || that.servicesStatic[disease].title.toLowerCase().indexOf(value.toLowerCase()) >= 0) {
-                that.services.push(that.servicesStatic[disease]);
+        for (var service in that.servicesStatic ) {
+            if (value == '' || that.servicesStatic[service].title.toLowerCase().indexOf(value.toLowerCase()) >= 0) {
+                that.services.push(that.servicesStatic[service]);
             }
         }
     };
@@ -28,9 +28,9 @@ function ViewModel()
             var data = JSON.parse(response);
             var items = data.items;
             for(var item in items) {
-                var disease = new Service(items[item]);
-                that.servicesStatic.push(disease);
-                that.services.push(disease);
+                var service = new Service(items[item]);
+                that.servicesStatic.push(service);
+                that.services.push(service);
             }
         })
     }

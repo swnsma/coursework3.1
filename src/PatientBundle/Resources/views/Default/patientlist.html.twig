@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/manticora/patient/css/patientlist.css') }}"/>
+{% endblock %}
+{% block title %}Diseases{% endblock %}
+{% block body %}
+    {{ include('header.html.twig') }}
+    <h1>Diseases</h1>
+    <div class="container">
+        <div class="wrapper" >
+            <div class="search">
+                <label>Search:<input type="search" data-bind="value: query, valueUpdate: 'keyup'"/></label>
+                {% if new_action %}
+                <a href="{{ path('patient_new') }}"><button class="btn btn-info">Add new</button></a>
+                {% endif %}
+            </div>
+
+            <div class="table" data-bind="foreach: patients">
+                <div class="tr" data-bind="click: openPatient">
+                    <div class="td photo"><img class="patient-img" data-bind="attr:{src: patient_photo}"></div>
+                    <div class="td">
+                        <span class="bold">Name:</span>
+                        <span data-bind="text: name"></span>
+                    </div>
+                    <div class="td">
+                        <span class="bold">Social Security Number:</span>
+                        <span data-bind="text: social_security_number"></span>
+                    </div>
+                    <div class="td">
+                        <span class="bold">Phone:</span>
+                        <span data-bind="text: patient_phone"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('vendor/knockout/knockout-3.4.0.js') }}"></script>
+    <script src="{{ asset('vendor/manticora/patient/js/patientlist/API.js') }}"></script>
+    <script src="{{ asset('vendor/manticora/patient/js/patientlist/viewModel.js') }}"></script>
+{% endblock %}

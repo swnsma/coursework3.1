@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Session\Session;
 
 class BaseController extends Controller
 {
-    public function check()
+    public function check($route = null, $generalCheck = true)
     {
         $request = $this->container->get('request');
 
@@ -17,17 +17,22 @@ class BaseController extends Controller
             exit;
         }
         $userId = $session->get('userId');
-        $route = $request->get('_route');
+
+        if(is_null($route)){
+            $route = $request->get('_route');
+        }
+
         if (!$session->has($route)) {
             $acl = new Acl();
             $session->set($route, $acl->check($route, $userId));
         }
 
-        if (!$session->get($route)) {
+        if (!$session->get($route) && $generalCheck) {
             header('Location: ' . $this->generateUrl('lance_403'));
             exit;
         }
-        return true;
+
+        return $session->get($route);
     }
 
     public function generate404($session, $target)

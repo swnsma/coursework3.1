@@ -23,7 +23,9 @@ class DiseaseController extends BaseController
         if ($disease->getId()) {
             return $this->render('DiseaseBundle:Default:disease.html.twig', array(
                 'disease' => $disease->getData(),
-                'user' => $this->getUserDataHeader($request->getSession())));
+                'user' => $this->getUserDataHeader($request->getSession()),
+                'edit_action' => $this->check('disease_edit', false),
+                'delete_action' => $this->check('disease_delete', false)));
         }
         return $this->generate404($request->getSession(), 'Disease');
     }

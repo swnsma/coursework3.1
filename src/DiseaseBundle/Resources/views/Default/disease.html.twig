@@ -5,10 +5,10 @@
     <h1>Disease</h1>
     <div class="back"><a href="{{ path('disease_list') }}">Back to list</a></div>
     <div class="container">
-        {% if user.role == 1 %}
+        {% if edit_action or delete_action%}
             <div class="btns">
-                <a href="{{ path('disease_edit', {id: disease.id}) }}"><button class="btn btn-info">Edit</button></a>
-                <a href="{{ path('disease_delete', {id: disease.id}) }}"><button class="btn btn-danger">Remove</button></a>
+                {% if edit_action %}<a href="{{ path('disease_edit', {id: disease.id}) }}"><button class="btn btn-info">Edit</button></a>{% endif %}
+                {% if delete_action %}<a href="{{ path('disease_delete', {id: disease.id}) }}"><button class="btn btn-danger">Remove</button></a>{% endif %}
             </div>
         {% endif %}
         <div>

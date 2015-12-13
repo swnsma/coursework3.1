@@ -5,6 +5,17 @@
     height: 50px;
     width: 100%;
 }
+body {
+    padding-top: 60px;
+}
+.dropdown-menu li a{
+    font-size: 12px;
+}
+.dropdown-toggle {
+height: 50px;
+    width: 100px;
+    margin-left: -20px;
+}
 div.header-user {
     text-align: right;
     float:right;
