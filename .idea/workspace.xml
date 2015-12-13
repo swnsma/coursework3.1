@@ -2,50 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc3acd54-c1cc-4e5c-84c3-9b49d789f361" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/vendor/lancer/css/404.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/vendor/manticora/disease/js/diseaselist/API.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/vendor/manticora/service/js/servicelist/API.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/vendor/manticora/user/js/userlist/API.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DiseaseBundle/Model/Disease.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DiseaseBundle/Model/DiseaseCollection.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DiseaseBundle/Controller/DiseaseController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DiseaseBundle/Controller/DiseaseListController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ServiceBundle/Model/Service.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ServiceBundle/Model/ServiceCollection.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ServiceBundle/Controller/ServiceController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ServiceBundle/Controller/ServiceListController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/UserBundle/Model/UserCollection.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/UserBundle/Controller/UserController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/UserBundle/Controller/UserListController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/vendor/manticora/disease/css/disease.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DiseaseBundle/Resources/views/Default/disease.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DiseaseBundle/Resources/views/Default/diseaseedit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/vendor/manticora/disease/css/diseaselist.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DiseaseBundle/Resources/views/Default/diseaselist.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/views/Default/notfound.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/vendor/manticora/service/css/service.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ServiceBundle/Resources/views/Default/service.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ServiceBundle/Resources/views/Default/serviceedit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/vendor/manticora/service/css/servicelist.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ServiceBundle/Resources/views/Default/servicelist.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/vendor/manticora/user/css/userlist.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/UserBundle/Resources/views/Default/userlist.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/vendor/manticora/disease/js/diseaselist/viewModel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/vendor/manticora/service/js/servicelist/viewModel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/vendor/manticora/user/js/userlist/viewModel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractCollection.php" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractCollection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractModel.php" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/Acl.php" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/Acl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/AuthorizationController.php" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/AuthorizationController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/BaseController.php" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Controller/BaseController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/MagicObject.php" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/MagicObject.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/User.php" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Model/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/vendor/lancer/css/base.css" afterPath="$PROJECT_DIR$/web/vendor/lancer/css/base.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/header.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/header.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/install.xml" afterPath="$PROJECT_DIR$/app/install.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/Lancer/LanceBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ServiceBundle/Controller/ServiceController.php" afterPath="$PROJECT_DIR$/src/ServiceBundle/Controller/ServiceController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ServiceBundle/Controller/ServiceListController.php" afterPath="$PROJECT_DIR$/src/ServiceBundle/Controller/ServiceListController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ServiceBundle/Resources/views/Default/serviceedit.html.twig" afterPath="$PROJECT_DIR$/src/ServiceBundle/Resources/views/Default/serviceedit.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="project.iws" />
@@ -71,8 +30,8 @@
       <file leaf-file-name="ServiceListController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ServiceBundle/Controller/ServiceListController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.0">
-              <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+            <state vertical-scroll-proportion="-4.0">
+              <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
               <folding>
                 <element signature="e#44#93#0#PHP" expanded="true" />
               </folding>
@@ -100,16 +59,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userlist.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/vendor/manticora/user/css/userlist.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="service.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/vendor/manticora/service/css/service.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -130,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="serviceedit.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="serviceedit.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ServiceBundle/Resources/views/Default/serviceedit.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7">
-              <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+            <state vertical-scroll-proportion="-9.333333">
+              <caret line="43" column="60" selection-start-line="43" selection-start-column="60" selection-end-line="43" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -163,10 +112,24 @@
       <file leaf-file-name="ServiceController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ServiceBundle/Controller/ServiceController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.1111112">
-              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.888889">
+              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
               <folding>
                 <element signature="e#43#92#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractModel.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractModel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33333334">
+              <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+              <folding>
+                <marker date="1449949705675" expanded="true" signature="903:956" placeholder="SELECT * FRO..." />
+                <marker date="1449949705675" expanded="true" signature="2607:2667" placeholder="DELETE FROM ..." />
+                <marker date="1449949705675" expanded="true" signature="3404:3475" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
@@ -226,7 +189,6 @@
         <option value="$PROJECT_DIR$/web/vendor/manticora/service/js/servicelist/API.js" />
         <option value="$PROJECT_DIR$/src/ServiceBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/app/install.xml" />
-        <option value="$PROJECT_DIR$/src/ServiceBundle/Controller/ServiceListController.php" />
         <option value="$PROJECT_DIR$/src/ServiceBundle/Resources/views/Default/servicelist.html.twig" />
         <option value="$PROJECT_DIR$/web/vendor/manticora/disease/js/diseaselist/viewModel.js" />
         <option value="$PROJECT_DIR$/web/vendor/manticora/service/js/servicelist/viewModel.js" />
@@ -235,9 +197,10 @@
         <option value="$PROJECT_DIR$/web/vendor/manticora/service/css/servicelist.css" />
         <option value="$PROJECT_DIR$/web/vendor/manticora/service/css/service.css" />
         <option value="$PROJECT_DIR$/src/DiseaseBundle/Resources/views/Default/disease.html.twig" />
-        <option value="$PROJECT_DIR$/src/ServiceBundle/Controller/ServiceController.php" />
         <option value="$PROJECT_DIR$/src/DiseaseBundle/Resources/views/Default/diseaseedit.html.twig" />
         <option value="$PROJECT_DIR$/src/ServiceBundle/Resources/views/Default/serviceedit.html.twig" />
+        <option value="$PROJECT_DIR$/src/ServiceBundle/Controller/ServiceListController.php" />
+        <option value="$PROJECT_DIR$/src/ServiceBundle/Controller/ServiceController.php" />
       </list>
     </option>
   </component>
@@ -952,8 +915,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="51" y="24" width="1315" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32488823" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32786885" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -961,7 +925,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.278327" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3785395" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3785395" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -970,7 +934,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="MagicentoScripts" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -992,11 +955,11 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/ServiceBundle/Controller/ServiceController.php</url>
-          <line>49</line>
-          <option name="timeStamp" value="77" />
+          <line>71</line>
+          <option name="timeStamp" value="78" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="78" />
+      <option name="time" value="79" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="tbl_sql.php">
@@ -1131,18 +1094,6 @@
         <state vertical-scroll-proportion="6.4">
           <caret line="128" column="20" selection-start-line="128" selection-start-column="20" selection-end-line="128" selection-end-column="20" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-43.333332">
-          <caret line="65" column="31" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
-          <folding>
-            <marker date="1449949705675" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1449949705675" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1449949705675" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1466,31 +1417,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ServiceBundle/Controller/ServiceListController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.0">
-          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-          <folding>
-            <element signature="e#44#93#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DiseaseBundle/Resources/views/Default/disease.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.3333333">
           <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ServiceBundle/Controller/ServiceController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.1111112">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding>
-            <element signature="e#43#92#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1512,9 +1443,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ServiceBundle/Resources/views/Default/serviceedit.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7">
-          <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+        <state vertical-scroll-proportion="-9.333333">
+          <caret line="43" column="60" selection-start-line="43" selection-start-column="60" selection-end-line="43" selection-end-column="60" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ServiceBundle/Controller/ServiceListController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.0">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+          <folding>
+            <element signature="e#44#93#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ServiceBundle/Controller/ServiceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.888889">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding>
+            <element signature="e#43#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lancer/LanceBundle/Model/AbstractModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+          <folding>
+            <marker date="1449949705675" expanded="true" signature="903:956" placeholder="SELECT * FRO..." />
+            <marker date="1449949705675" expanded="true" signature="2607:2667" placeholder="DELETE FROM ..." />
+            <marker date="1449949705675" expanded="true" signature="3404:3475" placeholder="INSERT INTO ..." />
+          </folding>
         </state>
       </provider>
     </entry>

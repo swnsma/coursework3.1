@@ -34,7 +34,8 @@ class ServiceCollection extends AbstractCollection
         return $this->_itemsData;
     }
 
-    protected function _load() {
+    protected function _load()
+    {
         $connection = DbConnection::getInstance()->getConnection();
         $sth = $connection->query("SELECT * FROM $this->_tableName");
         $sth->execute();

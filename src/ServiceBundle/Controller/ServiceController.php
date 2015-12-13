@@ -30,6 +30,12 @@ class ServiceController extends BaseController
             'template_type' => 'New'));
     }
 
+    /**
+     * Delete service.
+     *
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
     public function deleteAction(Request $request)
     {
         $this->check();
@@ -37,7 +43,7 @@ class ServiceController extends BaseController
         $disease = new Service();
 
         $disease->load($id);
-        if($disease->getId()){
+        if ($disease->getId()) {
             $disease->delete();
             $disease->save();
         }
@@ -45,20 +51,34 @@ class ServiceController extends BaseController
         return $this->redirectToRoute('services_list');
     }
 
+    /**
+     * Save changed data.
+     *
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
     public function saveAction(Request $request)
     {
         $this->check();
         $data = $request->request->all();
-
+        $disease = new Service();
         if (empty($data['id'])) {
             unset($data['id']);
+        } else {
+            $disease->load($data['id']);
         }
-        $disease = new Service();
+
         $disease->setData($data);
         $disease->save();
         return $this->redirectToRoute('service_homepage', array('id' => $disease->getId()));
     }
 
+    /**
+     * Render service edit view.
+     *
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     */
     public function editAction(Request $request)
     {
         $this->check();

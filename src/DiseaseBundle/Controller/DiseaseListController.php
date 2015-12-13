@@ -9,6 +9,12 @@ use Symfony\Component\HttpFoundation\Response;
 
 class DiseaseListController extends BaseController
 {
+    /**
+     * Render disease list view.
+     *
+     * @param Request $request
+     * @return Response
+     */
     public function indexAction(Request $request)
     {
         $this->check();
@@ -16,6 +22,11 @@ class DiseaseListController extends BaseController
             'user' => $this->getUserDataHeader($request->getSession())));
     }
 
+    /**
+     * Load diseases data and return as json.
+     *
+     * @return Response
+     */
     public function loadAction()
     {
         $new =  new DiseaseCollection();
