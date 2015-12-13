@@ -148,7 +148,8 @@
                 "service_delete",
                 "service_new",
                 "service_save".
-                "services_list");
+                "services_list",
+                "lance_acl");
             </task>
             <task>
                 INSERT INTO `role_acl` (`role_id`, `acl_id`) VALUES

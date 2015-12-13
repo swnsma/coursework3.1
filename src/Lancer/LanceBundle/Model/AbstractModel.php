@@ -41,7 +41,9 @@ abstract class AbstractModel extends MagicObject
             'value' => $value
         ));
         $data = $STH->fetch();
-        $this->setOriginData($data);
+        if ($data) {
+            $this->setOriginData($data);
+        }
 
         return $this;
     }

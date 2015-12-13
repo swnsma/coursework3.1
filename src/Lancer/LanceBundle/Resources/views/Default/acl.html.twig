@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/lancer/css/acl.css') }}"/>
+{% endblock %}
+{% block title %}ACL{% endblock %}
+{% block body %}
+    {{ include('header.html.twig') }}
+    <h1>ACL Edit</h1>
+    <div class="container">
+        <div class="wrapper" >
+            <table class="table">
+                <thead>
+                    <tr data-bind="foreach: routes">
+                        <td data-bind="text: route"></td>
+                    </tr>
+                </thead>
+                <tbody>
+                <!--ko foreach: roles-->
+                    <tr>
+                        <td>
+                            <!--ko ifnot: edit -->
+                            <span data-bind="text: title, click:editStart"></span>
+                            <!--/ko-->
+                            <!--ko if: edit -->
+                                <input type="text" data-bind="value: title, valueUpdate: 'keyup', event:{blur:save}">
+                            <!--/ko-->
+                        </td>
+                        <!--ko foreach: list-->
+                            <td><input type="checkbox" data-bind="checked: flag"></td>
+                        <!--/ko-->
+                    </tr>
+                <!--/ko-->
+                    <tr>
+                        <td>
+                            <!--ko ifnot: addNew -->
+                            <div class="btn-info btn" data-bind="click:add">Add Role</div>
+                            <!--/ko  -->
+                            <!--ko if: addNew -->
+                            <input type="text" data-bind="value: newRoleTitle, valueUpdate: 'keyup'"/>
+                            <button class="btn btn-info" data-bind="click:save">Save</button>
+                            <button class="btn-danger btn" data-bind="click:reset">Reset</button>
+                            <!--/ko -->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('vendor/knockout/knockout-3.4.0.js') }}"></script>
+    <script src="{{ asset('vendor/lancer/js/API.js') }}"></script>
+    <script src="{{ asset('vendor/lancer/js/viewModel.js') }}"></script>
+{% endblock %}

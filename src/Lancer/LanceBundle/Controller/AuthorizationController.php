@@ -50,8 +50,10 @@ class AuthorizationController extends BaseController
     {
         $data = $request->request->all();
         $data['password'] = md5($data['password']);
-        $user = new User($data);
-        if (!$user->checkExists()) {
+        $user = new User();
+        $user->load($data['email'], 'email');
+        if (!$user->getId()) {
+            $user->setData($data);
             $user->setRoleId('2');
             $user->save();
 

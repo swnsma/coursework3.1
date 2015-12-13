@@ -12,24 +12,6 @@ class User extends AbstractModel
         }
     }
 
-    public function checkExists()
-    {
-        if (!empty($this->getData('id'))) {
-            return true;
-        }
-
-        if (!empty($this->getData('email'))) {
-            $sth = DbConnection::getInstance()->getConnection()->prepare("SELECT $this->_primary FROM $this->_mainTable WHERE `email` = ?");
-            $sth->execute(array($this->getData('email')));
-            $result = $sth->fetch();
-            if (!empty($result)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-
     public function getSecretHash()
     {
         $result = '';

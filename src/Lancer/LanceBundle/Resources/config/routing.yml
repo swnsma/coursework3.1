@@ -5,7 +5,22 @@ lancer_lance_install:
 lance_authorization:
     path: /login
     defaults: { _controller: LancerLanceBundle:Authorization:index }
-
+lance_acl:
+    path: /acl
+    defaults: { _controller: LancerLanceBundle:Acl:index }
+lance_acl_load:
+    path: /acl_load
+    defaults: { _controller: LancerLanceBundle:Acl:load }
+lance_acl_save_role:
+    path: /acl_save_role
+    defaults: { _controller: LancerLanceBundle:Acl:addRole }
+    requirements:
+            _method:  POST
+lance_acl_save_access:
+    path: /acl_save_access
+    defaults: { _controller: LancerLanceBundle:Acl:saveAccess }
+    requirements:
+            _method: POST
 lance_remind_password:
     path: /remind
     defaults: { _controller: LancerLanceBundle:Authorization:remind }
