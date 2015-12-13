@@ -3,6 +3,7 @@ namespace PatientBundle\Controller;
 
 use Lancer\LanceBundle\Controller\BaseController;
 use PatientBundle\Model\Patient;
+use PatientDiseaseBundle\Model\PatientDiseaseCollection;
 use Symfony\Component\HttpFoundation\Request;
 
 class PatientController extends BaseController
@@ -13,14 +14,17 @@ class PatientController extends BaseController
         $id = $request->get('id');
         $patient = new Patient();
         $patient->load($id);
+        $diseases = new PatientDiseaseCollection();
         if($patient->getId()){
             return $this->render('PatientBundle:Default:patient.html.twig', array(
                 'patient' => $patient->getData(),
                 'user' => $this->getUserDataHeader($request->getSession()),
                 'edit_action' => $this->check('patient_edit', false),
-                'delete_action' => $this->check('patient_delete', false)
+                'delete_action' => $this->check('patient_delete', false),
+                'diseases' => $diseases->getPatientItemsData($patient->getId(), true)
                 ));
         }
+
         return $this->generate404($request->getSession(), 'Patient');
     }
 

@@ -3,7 +3,6 @@
 namespace DiseaseBundle\Model;
 
 use Lancer\LanceBundle\Model\AbstractCollection;
-use Lancer\LanceBundle\Model\DbConnection;
 
 class DiseaseCollection extends AbstractCollection
 {
@@ -33,12 +32,5 @@ class DiseaseCollection extends AbstractCollection
         return $this->_itemsData;
     }
 
-    protected function _load()
-    {
-        $connection = DbConnection::getInstance()->getConnection();
-        $sth = $connection->query("SELECT * FROM $this->_tableName");
-        $sth->execute();
-        $this->_itemsData = $sth->fetchAll();
-    }
 
 }

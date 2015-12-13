@@ -1,0 +1,21 @@
+patient_disease_homepage:
+    path:     /patient_disease/{id}
+    defaults: { _controller: PatientDiseaseBundle:PatientDisease:index, id: no }
+
+patient_disease_edit:
+    path:   /patient_disease_edit/{id}
+    defaults: { _controller: PatientDiseaseBundle:PatientDisease:edit, id: no}
+
+patient_disease_new:
+    path:   /patient_disease_new/{id}
+    defaults: { _controller: PatientDiseaseBundle:PatientDisease:new, id: no }
+
+patient_disease_save:
+    path:   /patient_disease_save
+    defaults: { _controller: PatientDiseaseBundle:PatientDisease:save }
+    requirements:
+            _method: POST
+
+patient_disease_delete:
+    path:   /patient_disease_delete/{id}
+    defaults: { _controller: PatientDiseaseBundle:PatientDisease:delete, id: no }

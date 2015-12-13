@@ -35,6 +35,20 @@
                 <span class="bold">Social Security Number:</span>
                 <span>{{ patient.social_security_number }}</span>
             </div>
+            <div>
+                <span class="bold">Current diseases:</span>
+                <span>
+                    {% if diseases is empty %}
+                        No current diseases.
+                    {% else %}
+                        {% for disease in diseases %}
+                            <a href="{{ path('patient_disease_homepage', {id: disease.id}) }}">{{ disease.title }}.</a>
+                        {% endfor %}
+                    {% endif %}
+                    <a href="{{ path('patient_disease_new', {id: patient.id}) }}">Add new disease.</a>
+                </span>
+
+            </div>
             <div class="spacer" ></div>
         </div>
         <div>

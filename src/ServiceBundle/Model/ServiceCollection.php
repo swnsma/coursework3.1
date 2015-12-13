@@ -3,7 +3,6 @@
 namespace ServiceBundle\Model;
 
 use Lancer\LanceBundle\Model\AbstractCollection;
-use Lancer\LanceBundle\Model\DbConnection;
 use Symfony\Component\EventDispatcher\Tests\Service;
 
 class ServiceCollection extends AbstractCollection
@@ -34,11 +33,4 @@ class ServiceCollection extends AbstractCollection
         return $this->_itemsData;
     }
 
-    protected function _load()
-    {
-        $connection = DbConnection::getInstance()->getConnection();
-        $sth = $connection->query("SELECT * FROM $this->_tableName");
-        $sth->execute();
-        $this->_itemsData = $sth->fetchAll();
-    }
 }

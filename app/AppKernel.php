@@ -22,6 +22,7 @@ class AppKernel extends Kernel
             new PatientBundle\PatientBundle(),
             new DiseaseBundle\DiseaseBundle(),
             new ServiceBundle\ServiceBundle(),
+            new PatientDiseaseBundle\PatientDiseaseBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

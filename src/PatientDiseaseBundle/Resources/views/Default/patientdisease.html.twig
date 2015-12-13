@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+{% block title %}Patient Disease{% endblock %}
+{% block body %}
+    {{ include('header.html.twig') }}
+    <h1>Patient Disease</h1>
+    <div class="back"><a href="{{ path('patients_list') }}">Back to list</a></div>
+    <div class="container">
+        {% if edit_action or delete_action %}
+            <div class="btns">
+                {% if edit_action %} <a href="{{ path('patient_disease_edit', {id: data.id}) }}"><button class="btn btn-info">Edit</button></a>{% endif %}
+                {% if  delete_action %}<a href="{{ path('patient_disease_delete', {id: data.id}) }}"><button class="btn btn-danger">Remove</button></a>{% endif %}
+            </div>
+        {% endif %}
+        <div>
+            <div>
+                <span class="bold">Patient Name:</span>
+                <span>
+                    {% if data.title %}
+                        <a href="{{ path('patient_homepage', {id: data.patient_id }) }}">{{ data.patient_name }}</a>
+                    {% else %}
+                        {{ data.patient_name }}
+                    {% endif %}
+                </span>
+            </div>
+            <div>
+                <span class="bold">Disease:</span>
+                <span>
+                    {% if data.title %}
+                        <a href="{{ path('disease_homepage', {id: data.disease_id }) }}">{{ data.title }}</a>
+                    {% else %}
+                        {{ data.title }}
+                    {% endif %}
+                </span>
+            </div>
+            <div>
+                <span class="bold">Rift in the lute:</span>
+                <span>{{ data.illness_start|default('Date don\'t set') }}</span>
+            </div>
+            <div>
+                <span class="bold">The end of the disease:</span>
+                <span>{{ data.illness_end|default('Date don\'t set') }}</span>
+            </div>
+            <div>
+                <span class="bold">Healthy?</span>
+                <span>{% if data.healthy ==0 %}No{% else %}Yes{% endif %}</span>
+            </div>
+            <div>
+                <span class="bold">Doctor:</span>
+                <span>{{ data.user_name }}</span>
+            </div>
+            <div>
+                <span class="bold">Notes:</span>
+                <span>{{ data.notes|default('Empty.')|raw  }}</span>
+            </div>
+            <div class="spacer" ></div>
+        </div>
+    </div>
+{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/manticora/patient/css/patient.css') }}"
+{% endblock %}

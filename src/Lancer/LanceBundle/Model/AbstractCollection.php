@@ -16,4 +16,11 @@ abstract class AbstractCollection
 
     abstract public function getAllItemsData();
 
+    protected function _load()
+    {
+        $connection = DbConnection::getInstance()->getConnection();
+        $sth = $connection->query("SELECT * FROM $this->_tableName");
+        $sth->execute();
+        $this->_itemsData = $sth->fetchAll();
+    }
 }
