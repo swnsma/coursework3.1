@@ -56,7 +56,6 @@ class PatientDiseaseCollection extends AbstractCollection
         $sth = $connection->prepare("CALL GetPatientSpecifiedData(?, ?)");
         $sth->execute(array($patientId, $active?0:1));
         $result = $sth->fetchAll();
-
         if(empty($result[0]['id'])) {
             return array();
         } else {

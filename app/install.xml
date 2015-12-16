@@ -154,7 +154,8 @@
                 ("service_new"),
                 ("service_save"),
                 ("services_list"),
-                ("lance_acl");
+                ("lance_acl"),
+                ("patient_disease_list");
             </task>
             <task>
                 INSERT INTO `role_acl` (`role_id`, `acl_id`) VALUES
@@ -204,33 +205,35 @@
         <version>0.0.3</version>
         <tasks>
             <task>
-                CREATE PROCEDURE GetUserSpecifiedData(IN userId INT, IN helthy TINYINT )
+                CREATE PROCEDURE GetUserSpecifiedData(IN userId INT, IN active TINYINT )
                 BEGIN
                 SELECT patient_disease.id, patient_disease.patient_id, patient_disease.user_id,
                 patient_disease.disease_id, patient_disease.illness_start, patient_disease.illness_end,
                 patient_disease.healthy, patient_disease.notes, CONCAT(user.name, user.second_name) as user_name,
-                CONCAT(patient.name, patient.second_name) as patient_name, disease.title, COUNT( * ) AS total_count
+                CONCAT(patient.name, patient.second_name) as patient_name, disease.title
                 FROM patient_disease
                 INNER JOIN user ON patient_disease.user_id = user.id
                 INNER JOIN patient ON patient_disease.patient_id= patient.id
                 INNER JOIN disease ON patient_disease.disease_id= disease.id
-                WHERE patient_disease.healthy IN(0, healthy)
-                AND patient_disease.user_id = userId;
+                WHERE patient_disease.healthy IN(0, active)
+                AND patient_disease.user_id = userId
+                ORDER BY healthy;
                 END;
             </task>
             <task>
-                CREATE PROCEDURE GetPatientSpecifiedData(IN patientId INT, IN helthy TINYINT )
+                CREATE PROCEDURE GetPatientSpecifiedData(IN patientId INT, IN active TINYINT )
                 BEGIN
                 SELECT patient_disease.id, patient_disease.patient_id, patient_disease.user_id,
                 patient_disease.disease_id, patient_disease.illness_start, patient_disease.illness_end,
                 patient_disease.healthy, patient_disease.notes, CONCAT(user.name, user.second_name) as user_name,
-                CONCAT(patient.name, patient.second_name) as patient_name, disease.title, COUNT( * ) AS total_count
+                CONCAT(patient.name, patient.second_name) as patient_name, disease.title
                 FROM patient_disease
                 INNER JOIN user ON patient_disease.user_id = user.id
                 INNER JOIN patient ON patient_disease.patient_id= patient.id
                 INNER JOIN disease ON patient_disease.disease_id= disease.id
-                WHERE patient_disease.healthy IN(0, healthy)
-                AND patient_disease.patient_id = patientId;
+                WHERE patient_disease.healthy IN(0, active)
+                AND patient_disease.patient_id = patientId
+                ORDER BY healthy;
                 END;
             </task>
         </tasks>

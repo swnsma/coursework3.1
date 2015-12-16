@@ -4,7 +4,6 @@
     max-height: 50px;
 }.table{
      display: table;
-
  }
 
 .tr {
@@ -16,7 +15,10 @@
     border: 3px grey solid;
     border-radius: 20px;
     overflow: hidden;
-    height: 90px;
+    min-height: 90px;
+}
+.tr:hover{
+    border-color: black;
 }
 .td{
 
@@ -35,5 +37,6 @@
 .photo{
     margin-right: 20px;
     float: left;
+    height: 50px;
     clear: both;
 }

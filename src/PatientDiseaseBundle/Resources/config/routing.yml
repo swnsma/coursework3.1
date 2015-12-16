@@ -19,3 +19,9 @@ patient_disease_save:
 patient_disease_delete:
     path:   /patient_disease_delete/{id}
     defaults: { _controller: PatientDiseaseBundle:PatientDisease:delete, id: no }
+patient_disease_list:
+    path: /patient_disease_list/{id}
+    defaults: { _controller: PatientDiseaseBundle:PatientDiseaseList:index, id:no }
+patient_disease_load:
+    path: /patient_disease_load/{id}/{active}
+    defaults: { _controller: PatientDiseaseBundle:PatientDiseaseList:load, id:no, active: 0}

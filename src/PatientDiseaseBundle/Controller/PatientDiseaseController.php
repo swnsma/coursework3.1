@@ -101,6 +101,6 @@ class PatientDiseaseController extends BaseController
             $patient->delete();
             $patient->save();
         }
-        return $this->redirectToRoute('patient_homepage', ['id'=>$p->getId()]);
+        return $this->redirectToRoute('patient_homepage', ['id'=>$p]);
     }
 }

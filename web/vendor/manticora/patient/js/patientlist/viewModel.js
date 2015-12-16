@@ -4,6 +4,7 @@ function Patient(obj)
     for (var val in obj) {
         self[val] = obj[val];
     }
+    self.patient_phone = self.patient_phone?self.patient_phone:'Not set';
 
     self['name'] += ' ' + self['second_name'];
     self.openPatient = function () {

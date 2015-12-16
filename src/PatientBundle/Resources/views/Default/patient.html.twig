@@ -35,7 +35,12 @@
                 <span class="bold">Social Security Number:</span>
                 <span>{{ patient.social_security_number }}</span>
             </div>
+            <hr/>
             <div>
+                <div class="btns">
+                    {% if patient_disease_new %}<a href="{{ path('patient_disease_new', {id: patient.id}) }}"><button class="btn btn-info">Add new</button></a>{% endif %}
+                    <a href="{{ path('patient_disease_list', {id:patient.id}) }}"><button class="btn btn-danger">Show all</button></a>
+                </div>
                 <span class="bold">Current diseases:</span>
                 <span>
                     {% if diseases is empty %}
@@ -45,12 +50,11 @@
                             <a href="{{ path('patient_disease_homepage', {id: disease.id}) }}">{{ disease.title }}.</a>
                         {% endfor %}
                     {% endif %}
-                    {% if patient_disease_new %}<a href="{{ path('patient_disease_new', {id: patient.id}) }}">Add new disease.</a>{% endif %}
                 </span>
-
             </div>
             <div class="spacer" ></div>
         </div>
+        <hr/>
         <div>
             <h2>Referee: {{ patient.referee_name }}</h2>
         </div>

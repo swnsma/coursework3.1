@@ -13,6 +13,9 @@
 
     overflow: hidden;
 }
+.tr:hover{
+    border-color: black;
+}
 .td {
 }
 .bold{

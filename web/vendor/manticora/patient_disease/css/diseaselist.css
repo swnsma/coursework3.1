@@ -1,12 +1,7 @@
-.disease-img{
-    float: left;
-    max-width: 50px;
-    max-height: 50px;
-}.table{
+.table{
      display: table;
 
  }
-
 .tr {
     display: table-row;
     width: 45%;
@@ -16,10 +11,13 @@
     border: 3px grey solid;
     border-radius: 20px;
     overflow: hidden;
-    height: 90px;
+    height: 130px;
 }
 .tr:hover{
     border-color: black;
+}
+a, a:visited, a:hover, a:active {
+    color: inherit;
 }
 .td{
 

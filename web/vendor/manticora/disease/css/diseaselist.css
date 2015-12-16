@@ -17,6 +17,9 @@
     overflow: hidden;
     height: 90px;
 }
+.tr:hover{
+    border-color: black;
+}
 .td{
 
     overflow: hidden;

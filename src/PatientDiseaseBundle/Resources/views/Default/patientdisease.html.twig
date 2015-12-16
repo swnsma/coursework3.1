@@ -3,7 +3,7 @@
 {% block body %}
     {{ include('header.html.twig') }}
     <h1>Patient Disease</h1>
-    <div class="back"><a href="{{ path('patients_list') }}">Back to list</a></div>
+    <div class="back"><a href="{{ path('patient_disease_list', {id: data.patient_id}) }}">Back to list</a></div>
     <div class="container">
         {% if edit_action or delete_action %}
             <div class="btns">
