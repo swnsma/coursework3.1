@@ -21,6 +21,7 @@ class PatientController extends BaseController
                 'user' => $this->getUserDataHeader($request->getSession()),
                 'edit_action' => $this->check('patient_edit', false),
                 'delete_action' => $this->check('patient_delete', false),
+                'patient_disease_new' => $this->check('patient_disease_new', false),
                 'diseases' => $diseases->getPatientItemsData($patient->getId(), true)
                 ));
         }

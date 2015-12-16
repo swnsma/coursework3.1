@@ -45,7 +45,7 @@
                             <a href="{{ path('patient_disease_homepage', {id: disease.id}) }}">{{ disease.title }}.</a>
                         {% endfor %}
                     {% endif %}
-                    <a href="{{ path('patient_disease_new', {id: patient.id}) }}">Add new disease.</a>
+                    {% if patient_disease_new %}<a href="{{ path('patient_disease_new', {id: patient.id}) }}">Add new disease.</a>{% endif %}
                 </span>
 
             </div>

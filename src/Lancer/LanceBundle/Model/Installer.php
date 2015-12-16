@@ -27,15 +27,16 @@ class Installer
     protected function _install($installNode)
     {
         try {
-            DbConnection::getInstance()->getConnection()->beginTransaction();
-            if (version_compare($installNode->version, $this->config->version) >= 0) {
+
+            if (version_compare($installNode->version, $this->config->version) > 0) {
+                DbConnection::getInstance()->getConnection()->beginTransaction();
                 foreach ($installNode->tasks[0] as $task) {
                     DbConnection::getInstance()->getConnection()->query((string)$task);
                 }
+                DbConnection::getInstance()->getConnection()->commit();
+                $this->config->version = $installNode->version;
+                BigBrother::updateConfig($this->config);
             }
-            DbConnection::getInstance()->getConnection()->commit();
-            $this->config->version = $installNode->version;
-            BigBrother::updateConfig($this->config);
 
         } catch (\Exception $e) {
             DbConnection::getInstance()->getConnection()->rollBack();

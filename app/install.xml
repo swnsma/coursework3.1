@@ -135,26 +135,26 @@
                 INSERT INTO `role`(title) VALUES ('base');
             </task>
             <task>
-                INSERT INTO `user`(name, second_name, email, role_id) VALUES ('Alexandr', 'Kravchuk', 'swnsma@gmail.com', 1);
+                INSERT INTO `user`(name, second_name, email, role_id, password) VALUES ('Alexandr', 'Kravchuk', 'swnsma@gmail.com', 1, MD5('test'));
             </task>
             <task>
                 INSERT INTO `acl` (`route`) VALUES
-                ("lancer_lance_install",
-                "home",
-                "users_lists",
-                "disease_homepage",
-                "disease_edit",
-                "disease_new",
-                "disease_list",
-                "disease_delete",
-                "disease_save",
-                "service_homepage",
-                "service_edit",
-                "service_delete",
-                "service_new",
-                "service_save".
-                "services_list",
-                "lance_acl");
+                ("lancer_lance_install"),
+                ("home"),
+                ("users_lists"),
+                ("disease_homepage"),
+                ("disease_edit"),
+                ("disease_new"),
+                ("disease_list"),
+                ("disease_delete"),
+                ("disease_save"),
+                ("service_homepage"),
+                ("service_edit"),
+                ("service_delete"),
+                ("service_new"),
+                ("service_save"),
+                ("services_list"),
+                ("lance_acl");
             </task>
             <task>
                 INSERT INTO `role_acl` (`role_id`, `acl_id`) VALUES
@@ -165,7 +165,7 @@
                 (1, 5),
                 (1, 6),
                 (1, 7), (2, 7),
-                (1, 8)
+                (1, 8),
                 (1, 9),
                 (1, 10), (2, 10),
                 (1, 11),
@@ -182,17 +182,13 @@
                 )
             </task>
             <task>
-                delimiter //
                 CREATE TRIGGER generateHash AFTER INSERT ON user
                 FOR EACH ROW
                 BEGIN
                     INSERT INTO `secret` VALUES (NEW.id, MD5(UNIX_TIMESTAMP()));
                 END;
-                //
-                delimiter ;
             </task>
             <task>
-                delimiter //
                 CREATE TRIGGER generateNewHash BEFORE UPDATE ON user
                 FOR EACH ROW
                     BEGIN
@@ -201,8 +197,41 @@
                             INSERT INTO `secret` VALUES (NEW.id, MD5(UNIX_TIMESTAMP())) ON DUPLICATE KEY UPDATE `hash`= MD5(UNIX_TIMESTAMP());
                         END IF;
                     END;
-                //
-                delimiter ;
+            </task>
+        </tasks>
+    </install>
+    <install>
+        <version>0.0.3</version>
+        <tasks>
+            <task>
+                CREATE PROCEDURE GetUserSpecifiedData(IN userId INT, IN helthy TINYINT )
+                BEGIN
+                SELECT patient_disease.id, patient_disease.patient_id, patient_disease.user_id,
+                patient_disease.disease_id, patient_disease.illness_start, patient_disease.illness_end,
+                patient_disease.healthy, patient_disease.notes, CONCAT(user.name, user.second_name) as user_name,
+                CONCAT(patient.name, patient.second_name) as patient_name, disease.title, COUNT( * ) AS total_count
+                FROM patient_disease
+                INNER JOIN user ON patient_disease.user_id = user.id
+                INNER JOIN patient ON patient_disease.patient_id= patient.id
+                INNER JOIN disease ON patient_disease.disease_id= disease.id
+                WHERE patient_disease.healthy IN(0, healthy)
+                AND patient_disease.user_id = userId;
+                END;
+            </task>
+            <task>
+                CREATE PROCEDURE GetPatientSpecifiedData(IN patientId INT, IN helthy TINYINT )
+                BEGIN
+                SELECT patient_disease.id, patient_disease.patient_id, patient_disease.user_id,
+                patient_disease.disease_id, patient_disease.illness_start, patient_disease.illness_end,
+                patient_disease.healthy, patient_disease.notes, CONCAT(user.name, user.second_name) as user_name,
+                CONCAT(patient.name, patient.second_name) as patient_name, disease.title, COUNT( * ) AS total_count
+                FROM patient_disease
+                INNER JOIN user ON patient_disease.user_id = user.id
+                INNER JOIN patient ON patient_disease.patient_id= patient.id
+                INNER JOIN disease ON patient_disease.disease_id= disease.id
+                WHERE patient_disease.healthy IN(0, healthy)
+                AND patient_disease.patient_id = patientId;
+                END;
             </task>
         </tasks>
     </install>

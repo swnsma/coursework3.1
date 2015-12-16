@@ -45,7 +45,7 @@ final class BigBrother
         $filePath = getcwd() . self::CONFIG_FOLDER . self::CONFIG_NAME;
 
         if (!file_exists($filePath)) {
-            throw new \Exception("Can't load config file.");
+            throw new \Exception("Can't load config file. Please, install application first.");
         } else {
             $xml              = file_get_contents($filePath);
             self::$configTree = new \SimpleXMLElement($xml);

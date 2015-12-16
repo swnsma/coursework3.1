@@ -53,15 +53,10 @@ class PatientDiseaseCollection extends AbstractCollection
     protected function _patientSpecifiedLoad($patientId, $active = false)
     {
         $connection = DbConnection::getInstance()->getConnection();
-        $sql = $this->_getQuery(). " WHERE patient_id = ?";
-        if ($active) {
-            $sql .= " AND $this->_tableName.healthy = 0";
-        }
-
-        $sth = $connection->prepare($sql);
-        $sth->execute(array($patientId));
-
+        $sth = $connection->prepare("CALL GetPatientSpecifiedData(?, ?)");
+        $sth->execute(array($patientId, $active?0:1));
         $result = $sth->fetchAll();
+
         if(empty($result[0]['id'])) {
             return array();
         } else {
@@ -73,32 +68,14 @@ class PatientDiseaseCollection extends AbstractCollection
     protected function _userSpecifiedLoad($userId, $active = false)
     {
         $connection = DbConnection::getInstance()->getConnection();
-        $sql = $this->_getQuery().  " WHERE user_id = ?";
-        if ($active) {
-            $sql .= " AND $this->_tableName.healthy = 0";
-        }
-        $sth = $connection->prepare($sql);
-        $sth->execute(array($userId));
+        $sth = $connection->prepare("CALL GetUserSpecifiedData(?, ?)");
+        $sth->execute(array($userId, $active?0:1));
         $result = $sth->fetchAll();
+
         if(empty($result[0]['id'])) {
             return array();
         } else {
             return $result;
         }
-    }
-
-
-    private function _getQuery()
-    {
-        return <<<SQl
-        SELECT $this->_tableName.id, $this->_tableName.patient_id, $this->_tableName.user_id,
-        $this->_tableName.disease_id, $this->_tableName.illness_start, $this->_tableName.illness_end,
-        $this->_tableName.healthy, $this->_tableName.notes, CONCAT(user.name, user.second_name) as user_name,
-        CONCAT(patient.name, patient.second_name) as patient_name, disease.title, COUNT( * ) AS total_count
-        FROM $this->_tableName
-                INNER JOIN user ON user.id = user_id
-                INNER JOIN patient ON patient.id = patient_id
-                INNER JOIN disease ON disease.id = disease_id
-SQl;
     }
 }
