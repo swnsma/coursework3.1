@@ -1,14 +1,14 @@
 <?php
-namespace PatientDiseaseBundle\Model;
+namespace PatientServiceBundle\Model;
 
 use Lancer\LanceBundle\Model\AbstractCollection;
 use Lancer\LanceBundle\Model\DbConnection;
 
-class PatientDiseaseCollection extends AbstractCollection
+class PatientServiceCollection extends  AbstractCollection
 {
     public function __construct()
     {
-        parent::__construct('patient_disease');
+        parent::__construct('patient_service');
     }
 
     public function getAllItems()
@@ -53,10 +53,9 @@ class PatientDiseaseCollection extends AbstractCollection
     protected function _patientSpecifiedLoad($patientId, $active = false)
     {
         $connection = DbConnection::getInstance()->getConnection();
-        $sth = $connection->prepare("CALL GetPatientSpecifiedPatientDisease(?, ?)");
+        $sth = $connection->prepare("CALL GetPatientSpecifiedPatientService(?, ?)");
         $sth->execute(array($patientId, $active?0:1));
         $result = $sth->fetchAll();
-
         if(empty($result[0]['id'])) {
             return array();
         } else {
@@ -68,7 +67,7 @@ class PatientDiseaseCollection extends AbstractCollection
     protected function _userSpecifiedLoad($userId, $active = false)
     {
         $connection = DbConnection::getInstance()->getConnection();
-        $sth = $connection->prepare("CALL GetUserSpecifiedPatientDisease(?, ?)");
+        $sth = $connection->prepare("CALL GetUserSpecifiedPatientService(?, ?)");
         $sth->execute(array($userId, $active?0:1));
         $result = $sth->fetchAll();
 

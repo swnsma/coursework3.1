@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/manticora/patient_service/css/servicelist.css') }}"/>
+{% endblock %}
+{% block title %}Patient Service{% endblock %}
+{% block body %}
+    {{ include('header.html.twig') }}
+    <h1>Patient Service</h1>
+    <h2><a href="{{ path('patient_homepage', {id: patient.id}) }}">{{ [patient.name, ' ', patient.second_name]|join }}</a></h2>
+    <div class="container">
+        <div class="wrapper" >
+            <div class="search">
+                <label>Search:<input type="search" data-bind="value: query, valueUpdate: 'keyup'"/></label>
+                <label>Show only active?<input type="checkbox" data-bind="checked:active"></label>
+                <span class="bold">Total found: <!--ko text:totalCount--><!--/ko--></span>
+                {% if new_action %}<a href="{{ path('patient_service_new', {id:patient.id}) }}"><button class="btn btn-info">Add new</button></a>{% endif %}
+            </div>
+            <div class="table" data-bind="foreach: services">
+                <div class="tr" data-bind="click:openPatient">
+                    <div class="td">
+                        <span class="bold">Title:</span>
+                        <span data-bind="text: title"></span>
+                    </div>
+                    <div class="td">
+                        <span class="bold">Doctor:</span>
+                        <span data-bind="text: user_name"></span>
+                    </div>
+                    <div class="td">
+                        <span class="bold">Date:</span>
+                        <span data-bind="text: date"></span>
+                    </div>
+                    <div class="td">
+                        <span class="bold">Time:</span>
+                        <span data-bind="text: time"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('vendor/knockout/knockout-3.4.0.js') }}"></script>
+    <script>patient_identify = '{{patient.id}}'</script>
+    <script src="{{ asset('vendor/manticora/patient_service/js/API.js') }}"></script>
+    <script src="{{ asset('vendor/manticora/patient_service/js/viewModel.js') }}"></script>
+{% endblock %}

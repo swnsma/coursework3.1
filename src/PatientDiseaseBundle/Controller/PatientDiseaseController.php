@@ -36,7 +36,7 @@ class PatientDiseaseController extends BaseController
         $patient->load($id);
 
         if (!$patient->getId()) {
-            return $this->redirectToRoute('patient_new');
+            return $this->redirectToRoute('patient_disease_new');
         }
 
         $patient->fullLoad();
@@ -84,6 +84,13 @@ class PatientDiseaseController extends BaseController
     {
         $this->check();
         $data = $request->request->all();
+
+        if (empty($data['illness_start'])) {
+            $data['illness_start'] = null;
+        }
+        if (empty($data['illness_end'])) {
+           $data['illness_end'] = null;
+        }
         $patient = new PatientDisease();
         $patient->setData($data);
         $patient->save();
@@ -101,6 +108,7 @@ class PatientDiseaseController extends BaseController
             $patient->delete();
             $patient->save();
         }
+
         return $this->redirectToRoute('patient_homepage', ['id'=>$p]);
     }
 }

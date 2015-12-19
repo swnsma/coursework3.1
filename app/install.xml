@@ -71,12 +71,14 @@
             );
             </task>
             <task>
-                CREATE TABLE IF NOT EXISTS service_patient (
+                CREATE TABLE IF NOT EXISTS patient_service (
                 id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
                 service_id INT NOT NULL,
                 patient_id INT NOT NULL,
                 user_id INT NOT NULL,
-                date DATETIME,
+                date DATE,
+                time TIME,
+                notes TEXT NULL DEFAULT NULL,
                 CONSTRAINT perServicePatient FOREIGN KEY (service_id) REFERENCES service(id) ON DELETE CASCADE ON UPDATE CASCADE,
                 CONSTRAINT perPatientService FOREIGN KEY (patient_id) REFERENCES patient(id) ON DELETE CASCADE ON UPDATE CASCADE,
                 CONSTRAINT perUserPatientService FOREIGN KEY (user_id) REFERENCES user(id) ON DELETE CASCADE ON UPDATE CASCADE
@@ -155,7 +157,13 @@
                 ("service_save"),
                 ("services_list"),
                 ("lance_acl"),
-                ("patient_disease_list");
+                ("patient_disease_list"),
+                ("patient_service_homepage"),
+                ("patient_service_save"),
+                ("patient_service_delete"),
+                ("patient_service_edit"),
+                ("patient_service_new"),
+                ("patient_service_list");
             </task>
             <task>
                 INSERT INTO `role_acl` (`role_id`, `acl_id`) VALUES
@@ -205,12 +213,12 @@
         <version>0.0.3</version>
         <tasks>
             <task>
-                CREATE PROCEDURE GetUserSpecifiedData(IN userId INT, IN active TINYINT )
+                CREATE PROCEDURE GetUserSpecifiedPatientDisease(IN userId INT, IN active TINYINT )
                 BEGIN
                 SELECT patient_disease.id, patient_disease.patient_id, patient_disease.user_id,
                 patient_disease.disease_id, patient_disease.illness_start, patient_disease.illness_end,
-                patient_disease.healthy, patient_disease.notes, CONCAT(user.name, user.second_name) as user_name,
-                CONCAT(patient.name, patient.second_name) as patient_name, disease.title
+                patient_disease.healthy, patient_disease.notes, CONCAT(user.name, ' ', user.second_name) as user_name,
+                CONCAT(patient.name, ' ', patient.second_name) as patient_name, disease.title
                 FROM patient_disease
                 INNER JOIN user ON patient_disease.user_id = user.id
                 INNER JOIN patient ON patient_disease.patient_id= patient.id
@@ -221,12 +229,12 @@
                 END;
             </task>
             <task>
-                CREATE PROCEDURE GetPatientSpecifiedData(IN patientId INT, IN active TINYINT )
+                CREATE PROCEDURE GetPatientSpecifiedPatientDisease(IN patientId INT, IN active TINYINT )
                 BEGIN
                 SELECT patient_disease.id, patient_disease.patient_id, patient_disease.user_id,
                 patient_disease.disease_id, patient_disease.illness_start, patient_disease.illness_end,
-                patient_disease.healthy, patient_disease.notes, CONCAT(user.name, user.second_name) as user_name,
-                CONCAT(patient.name, patient.second_name) as patient_name, disease.title
+                patient_disease.healthy, patient_disease.notes, CONCAT(user.name, ' ', user.second_name) as user_name,
+                CONCAT(patient.name, ' ', patient.second_name) as patient_name, disease.title
                 FROM patient_disease
                 INNER JOIN user ON patient_disease.user_id = user.id
                 INNER JOIN patient ON patient_disease.patient_id= patient.id
@@ -234,6 +242,34 @@
                 WHERE patient_disease.healthy IN(0, active)
                 AND patient_disease.patient_id = patientId
                 ORDER BY healthy;
+                END;
+            </task>
+            <task>
+                CREATE PROCEDURE GetUserSpecifiedPatientService(IN userId INT, IN active TINYINT)
+                BEGIN
+                SELECT patient_service.id, patient_service.patient_id, patient_service.user_id,
+                patient_service.service_id, patient_service.date, patient_service.time, patient_service.notes, CONCAT(user.name, ' ', user.second_name) as user_name, CONCAT(patient.name, ' ', patient.second_name) as patient_name, service.title
+                FROM patient_service INNER JOIN user ON patient_service.user_id = user.id
+                INNER JOIN patient ON patient_service.patient_id = patient.id
+                INNER JOIN service ON patient_service.service_id = service.id
+                WHERE patient_service.user_id = userId AND
+                IF(active=1,
+                IF(patient_service.date > CURDATE() OR (patient_service.date = CURDATE() AND patient_service.time > CURTIME()), true, false), true)
+                ORDER BY date DESC;
+                END;
+            </task>
+            <task>
+                CREATE PROCEDURE GetPatientSpecifiedPatientService(IN patientId INT, IN active TINYINT)
+                BEGIN
+                SELECT patient_service.id, patient_service.patient_id, patient_service.user_id,
+                patient_service.service_id, patient_service.date, patient_service.time, patient_service.notes, CONCAT(user.name, ' ', user.second_name) as user_name, CONCAT(patient.name, ' ', patient.second_name) as patient_name, service.title
+                FROM patient_service INNER JOIN user ON patient_service.user_id = user.id
+                INNER JOIN patient ON patient_service.patient_id = patient.id
+                INNER JOIN service ON patient_service.service_id = service.id
+                WHERE patient_service.patient_id = patientId AND
+                IF(active=1,
+                IF(patient_service.date > CURDATE() OR (patient_service.date = CURDATE() AND patient_service.time > CURTIME()), true, false), true)
+                ORDER BY date DESC;
                 END;
             </task>
         </tasks>

@@ -1,14 +1,14 @@
 {% extends 'base.html.twig' %}
-{% block title %}Patient Disease{% endblock %}
+{% block title %}Patient Service{% endblock %}
 {% block body %}
     {{ include('header.html.twig') }}
-    <h1>Patient Disease</h1>
-    <div class="back"><a href="{{ path('patient_disease_list', {id: data.patient_id}) }}">Back to list</a></div>
+    <h1>Patient Service</h1>
+    <div class="back"><a href="{{ path('patient_service_list', {id: data.patient_id}) }}">Back to list</a></div>
     <div class="container">
         {% if edit_action or delete_action %}
             <div class="btns">
-                {% if edit_action %} <a href="{{ path('patient_disease_edit', {id: data.id}) }}"><button class="btn btn-info">Edit</button></a>{% endif %}
-                {% if  delete_action %}<a href="{{ path('patient_disease_delete', {id: data.id}) }}"><button class="btn btn-danger">Remove</button></a>{% endif %}
+                {% if edit_action %} <a href="{{ path('patient_service_edit', {id: data.id}) }}"><button class="btn btn-info">Edit</button></a>{% endif %}
+                {% if  delete_action %}<a href="{{ path('patient_service_delete', {id: data.id}) }}"><button class="btn btn-danger">Remove</button></a>{% endif %}
             </div>
         {% endif %}
         <div>
@@ -19,22 +19,18 @@
                 </span>
             </div>
             <div>
-                <span class="bold">Disease:</span>
+                <span class="bold">Service:</span>
                 <span>
-                    <a href="{{ path('disease_homepage', {id: data.disease_id }) }}">{{ data.title }}</a>
+                    <a href="{{ path('service_homepage', {id: data.service_id }) }}">{{ data.title }}</a>
                 </span>
             </div>
             <div>
-                <span class="bold">Rift in the lute:</span>
-                <span>{{ data.illness_start|default('Date don\'t set') }}</span>
+                <span class="bold">Date:</span>
+                <span>{{ data.date }}</span>
             </div>
             <div>
-                <span class="bold">The end of the disease:</span>
-                <span>{{ data.illness_end|default('Date don\'t set') }}</span>
-            </div>
-            <div>
-                <span class="bold">Healthy?</span>
-                <span>{% if data.healthy ==0 %}No{% else %}Yes{% endif %}</span>
+                <span class="bold">Time:</span>
+                <span>{{ data.time }}</span>
             </div>
             <div>
                 <span class="bold">Doctor:</span>

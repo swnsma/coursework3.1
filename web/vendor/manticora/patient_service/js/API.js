@@ -1,7 +1,7 @@
 var api = {
     loadPatients: function (successFunction, id, active) {
         jQuery.ajax({
-            url: '/patient_disease_load/'+id+'/'+(active?0:1),
+            url: '/patient_service_load/'+id+'/'+(active?0:1),
             type: 'GET',
             success: function(response) {
                 successFunction(response);

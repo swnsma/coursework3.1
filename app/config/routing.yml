@@ -1,3 +1,7 @@
+patient_service:
+    resource: "@PatientServiceBundle/Resources/config/routing.yml"
+    prefix:   /
+
 patient_disease:
     resource: "@PatientDiseaseBundle/Resources/config/routing.yml"
     prefix:   /

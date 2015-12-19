@@ -1,0 +1,25 @@
+patient_service_homepage:
+    path:     /patient_service/{id}
+    defaults: { _controller: PatientServiceBundle:PatientService:index, id: no }
+patient_service_save:
+    path:     /patient_service_save
+    defaults: { _controller: PatientServiceBundle:PatientService:save }
+    requirements:
+            _method: POST
+
+patient_service_delete:
+    path:     /patient_service_delete/{id}
+    defaults: { _controller: PatientServiceBundle:PatientService:delete, id: no }
+patient_service_edit:
+    path:     /patient_service_edit/{id}
+    defaults: { _controller: PatientServiceBundle:PatientService:edit, id: no }
+patient_service_new:
+    path:     /patient_service_new/{id}
+    defaults: { _controller: PatientServiceBundle:PatientService:new, id: no }
+
+patient_service_list:
+    path:     /patient_service_list/{id}
+    defaults: { _controller: PatientServiceBundle:PatientServiceList:index, id: no}
+patient_service_load:
+    path:     /patient_service_load/{id}/{active}
+    defaults: { _controller: PatientServiceBundle:PatientServiceList:load, id: no, active: 0}

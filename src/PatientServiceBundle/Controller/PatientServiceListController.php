@@ -1,12 +1,13 @@
 <?php
-namespace PatientDiseaseBundle\Controller;
+namespace PatientServiceBundle\Controller;
+
 use Lancer\LanceBundle\Controller\BaseController;
 use PatientBundle\Model\Patient;
-use PatientDiseaseBundle\Model\PatientDiseaseCollection;
+use PatientServiceBundle\Model\PatientServiceCollection;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class PatientDiseaseListController extends BaseController
+class PatientServiceListController extends BaseController
 {
     public function indexAction(Request $request)
     {
@@ -15,20 +16,20 @@ class PatientDiseaseListController extends BaseController
         $patient = new Patient();
         $patient->load($id);
         if($patient->getId()){
-            return $this->render("PatientDiseaseBundle:Default:patientdiseaselist.html.twig", array(
+            return $this->render("PatientServiceBundle:Default:patientservicelist.html.twig", array(
                 'user' => $this->getUserDataHeader($request->getSession()),
                 'patient' => $patient->getData(),
-                'new_action' => $this->check('patient_disease_new', false)
+                'new_action' => $this->check('patient_service_new', false)
             ));
         }
-        return $this->generate404($request->getSession(), 'Patient\'s Diseases');
+        return $this->generate404($request->getSession(), 'Patient\'s Services');
     }
 
     public function loadAction(Request $request)
     {
         $id  = $request->get('id');
-        $active = $request->get('active')=="0"?true:false;
-        $collection = new PatientDiseaseCollection();
+        $active = $request->get('active')=="0"?false:true;
+        $collection = new PatientServiceCollection();
         $data = array();
         $data['items'] = $collection->getPatientItemsData($id, $active);
         $data['total'] = count($data['items']);

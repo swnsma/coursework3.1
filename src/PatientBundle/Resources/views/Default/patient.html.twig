@@ -52,6 +52,24 @@
                     {% endif %}
                 </span>
             </div>
+
+            <hr/>
+            <div>
+                <div class="btns">
+                    {% if patient_service_new %}<a href="{{ path('patient_service_new', {id: patient.id}) }}"><button class="btn btn-info">Add new</button></a>{% endif %}
+                    <a href="{{ path('patient_service_list', {id:patient.id}) }}"><button class="btn btn-danger">Show all</button></a>
+                </div>
+                <span class="bold">Wait for services:</span>
+                <span>
+                    {% if services is empty %}
+                        No services.
+                    {% else %}
+                        {% for service in services %}
+                            <a href="{{ path('patient_service_homepage', {id: service.id}) }}">{{ service.title }}.</a>
+                        {% endfor %}
+                    {% endif %}
+                </span>
+            </div>
             <div class="spacer" ></div>
         </div>
         <hr/>

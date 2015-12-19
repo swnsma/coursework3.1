@@ -1,34 +1,33 @@
-function PatientDisease(obj)
+function PatientService(obj)
 {
     var self = this;
     self.title = obj.title;
     self.user_name = obj.user_name;
-    self.start = obj.illness_start?obj.illness_start:'Don\'t set.';
-    self.end = obj.illness_end?obj.illness_end:'Don\'t set.';
+    self.date = obj.date;
+    self.time = obj.time;
     self.id = obj.id;
-    self.healthy = obj.healthy=="1"?'Yes.':'No.';
 
     self.openPatient = function () {
-        window.location= 'http://' + window.location.host + '/' + window.location.pathname.split('/')[1]+ '/patient_disease/' + self.id;
+        window.location= 'http://' + window.location.host + '/' + window.location.pathname.split('/')[1]+ '/patient_service/' + self.id;
     };
 }
 
 function ViewModel()
 {
     var that = this;
-    that.diseasesStatic = [];
+    that.sevicesStatic = [];
     that.query = ko.observable('');
-    that.diseases = ko.observableArray([]);
+    that.services = ko.observableArray([]);
     that.totalCount = ko.observable();
     that.active = ko.observable(false);
     that.search = function(value) {
-        that.diseases.removeAll();
-        for (var disease in that.diseasesStatic ) {
+        that.services.removeAll();
+        for (var service in that.sevicesStatic ) {
             if (value == ''
-                || that.diseasesStatic[disease].user_name.toLowerCase().indexOf(value.toLowerCase()) >= 0
-                || that.diseasesStatic[disease].title.toLowerCase().indexOf(value.toLowerCase()) >= 0
+                || that.sevicesStatic[service].user_name.toLowerCase().indexOf(value.toLowerCase()) >= 0
+                || that.sevicesStatic[service].title.toLowerCase().indexOf(value.toLowerCase()) >= 0
             ) {
-                that.diseases.push(that.diseasesStatic[disease]);
+                that.services.push(that.sevicesStatic[service]);
             }
         }
     };
@@ -37,15 +36,15 @@ function ViewModel()
         that.totalCount(data.total);
         data = data.items;
         for(var item in data) {
-            var disease = new PatientDisease(data[item]);
-            that.diseasesStatic.push(disease);
-            that.diseases.push(disease);
+            var service = new PatientService(data[item]);
+            that.sevicesStatic.push(service);
+            that.services.push(service);
         }
         that.query('');
     };
     that.reload = function() {
-        that.diseases.removeAll();
-        that.diseasesStatic = [];
+        that.services.removeAll();
+        that.sevicesStatic = [];
         api.loadPatients(that.load, patient_identify, that.active());
     };
     that.activate = function(){
