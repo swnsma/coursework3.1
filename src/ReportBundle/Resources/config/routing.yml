@@ -1,0 +1,9 @@
+report_homepage:
+    path:     /report
+    defaults: { _controller: ReportBundle:Report:index }
+report_diseases:
+    path:     /report_diseases
+    defaults: { _controller: ReportBundle:Report:diseases }
+report_services:
+    path:     /report_services
+    defaults: { _controller: ReportBundle:Report:services }

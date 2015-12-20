@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+{% block title %}Patients report{% endblock %}
+{% block body %}
+    {{ include('header.html.twig') }}
+    <h1>Patients report</h1>
+    <div class="container">
+        <h2>Last 30 days:</h2>
+        <div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <td>Service</td>
+                    <td>Patients</td>
+                </tr>
+                </thead>
+                <tbody>
+                {% for record in month %}
+                    <tr>
+                            <td>{{ record.title }}</td>
+                            <td>{{ record.total }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <h2>All</h2>
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>Disease</td>
+                        <td>Patients</td>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for record in all %}
+                    <tr>
+                        <td>{{ record.title }}</td>
+                        <td>{{ record.total }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

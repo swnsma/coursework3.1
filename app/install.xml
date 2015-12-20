@@ -166,7 +166,10 @@
                 ("patient_service_new"),
                 ("patient_service_list"),
                 ("lance_reject_save"),
-                ("lance_myaccount");
+                ("lance_myaccount"),
+                ("report_services"),
+                ("report_diseases"),
+                ("report_homepage");
             </task>
             <task>
                 INSERT INTO `role_acl` (`role_id`, `acl_id`) VALUES

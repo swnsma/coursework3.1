@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+{% block title %}Service report{% endblock %}
+{% block body %}
+    {{ include('header.html.twig') }}
+    <h1>Services report</h1>
+    <div class="container">
+        <h2>Services report:</h2>
+        <div>Total amount: {{ profit.total_price|number_format(2, '.', ',')  }}</div>
+        <div>Average amount: {{ profit.avg|number_format(2, '.', ',')  }}</div>
+        <div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <td>Disease</td>
+                    <td>Patients</td>
+                    <td>Total</td>
+                </tr>
+                </thead>
+                <tbody>
+                {% for record in services %}
+                <tr>
+                    <td>{{ record.title }}</td>
+                    <td>{{ record.total }}</td>
+                    <td>{{ record.total_price|number_format(2, '.', ',')  }}</td>
+                </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}
