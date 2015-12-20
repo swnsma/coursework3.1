@@ -58,12 +58,14 @@ function ViewModel()
     };
     that.save = function() {
         api.saveRole(function(response) {
-            var obj ={
-                title: that.newRoleTitle(),
-                acl: {}
-            };
-            that.roles.push(new Role(obj, response.id, that.routes));
-            that.addNew(false);
+            if(response.id) {
+                var obj = {
+                    title: that.newRoleTitle(),
+                    acl: {}
+                };
+                that.roles.push(new Role(obj, response.id, that.routes));
+                that.addNew(false);
+            }
         }, {title: that.newRoleTitle()});
     };
     that.reset = function() {

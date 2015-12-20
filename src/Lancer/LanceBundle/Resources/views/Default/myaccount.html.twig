@@ -1,0 +1,155 @@
+{% extends 'base.html.twig' %}
+{% block title %}My account{% endblock %}
+{% block body %}
+    {{ include('header.html.twig') }}
+    <h1>My account</h1>
+    <div class="container">
+        <div>
+            <nav class="navbar navbar-default">
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active" data-bind="click: changeLocation('myaccount')"><a>My account</a></li>
+                    <li data-bind="click: changeLocation('services')"><a>Services</a></li>
+                    <li data-bind="click: changeLocation('patients')"><a>Patients</a></li>
+                    {% if rejections %}<li data-bind="click: changeLocation('rejects')"><a>Rejection</a></li>{% endif %}
+                    {% if acl %}<li><a href="{{ path('lance_acl') }}">ACL panel</a></li>{% endif %}
+                    {% if install %}<li><a href="{{ path("lancer_lance_install") }}">Launch Install</a></li>{% endif %}
+                    <li class="btn-info"><a href="{{ path("lance_user_patient_route") }}">Become a patient</a></li>
+                </ul>
+            </div>
+            </nav>
+        </div>
+        <div class="col-sm-10">
+            <!--ko if: isMyaccount-->
+            <!--ko ifnot:edit -->
+            <div>
+                <img class="img" data-bind="attr:{src:photo}">
+                <div>
+                    <span class="bold">Name:</span>
+                    <span data-bind="text: name"></span>
+                </div>
+                <div>
+                    <span class="bold">Second name:</span>
+                    <span data-bind="text: second_name"></span>
+                </div>
+                <div>
+                    <span class="bold">Email:</span>
+                    <span data-bind="text: email"></span>
+                </div>
+                <div>
+                    <div class="btn btn-info" data-bind="click: editStart">Edit</div>
+                </div>
+            </div>
+            <!--/ko-->
+            <!--ko if: edit-->
+            <div>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-4" for="name">Name</label>
+                        <div class="col-sm-8">
+                            <input id="name" data-bind="value:bname" name="name" required="required" type="text" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4" for="second_name">Second name</label>
+                        <div class="col-sm-8">
+                            <input id="second_name" data-bind="value: bsecond_name" name="second_name" required="required" type="text" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4" for="email">Email</label>
+                        <div class="col-sm-8">
+                            <input id="email" data-bind="value:bemail" name="email" required="required" type="text" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4" for="photo">Photo</label>
+                        <div class="col-sm-8">
+                            <input id="photo" data-bind="value:bphoto" name="photo" required="required" type="text" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-8">
+                            <div data-bind="click: saveChanges" class="btn btn-info">Save</div>
+                            <div data-bind="click: cancel" class="btn btn-danger">Cancel</div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!--/ko-->
+            <!--/ko-->
+
+            <!--ko if: isServices-->
+            <div>
+                <label>Show upcoming <input type="checkbox" data-bind="checked: servicesActive"/></label>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <td>Patient Name</td>
+                        <td>Service</td>
+                        <td>Date</td>
+                        <td>Time</td>
+                        <td>Price</td>
+                    </tr>
+                    </thead>
+                    <tbody data-bind="foreach: services">
+                    <tr data-bind="click: openPatient">
+                        <td data-bind="text: patient_name"></td>
+                        <td data-bind="text: title"></td>
+                        <td data-bind="text: date"></td>
+                        <td data-bind="text: time"></td>
+                        <td data-bind="text: price"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--/ko-->
+
+            <!--ko if: isPatients-->
+            <div>
+                <label>Show unhealthy<input type="checkbox" data-bind="checked: patientsActive"/></label>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <td>Patient Name</td>
+                        <td>Disease</td>
+                        <td>Illness begin</td>
+                        <td>Illness end</td>
+                        <td>Healthy?</td>
+                    </tr>
+                    </thead>
+                    <tbody data-bind="foreach: patients">
+                    <tr data-bind="click: openPatient">
+                        <td data-bind="text: patient_name"></td>
+                        <td data-bind="text: title"></td>
+                        <td data-bind="text: start"></td>
+                        <td data-bind="text: end"></td>
+                        <td data-bind="text: healthy"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--/ko-->
+            <!--ko if: isRejects -->
+            <div>Rejection does not allow to save data in table.</div>
+            <table class="table">
+                <tbody data-bind="foreach: rejections">
+                <tr>
+                    <td><label data-bind="text: label" for="status"></label></td>
+                    <td><input id="status"type="checkbox" data-bind="checked:flag"></td>
+                </tr>
+                </tbody>
+            </table>
+            <!--/ko-->
+
+        </div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('vendor/knockout/knockout-3.4.0.js') }}"></script>
+    <script src="{{ asset('vendor/manticora/patient_service/js/PatientService.js') }}"></script>
+    <script src="{{ asset('vendor/manticora/patient_disease/js/PatientDisease.js') }}"></script>
+    <script src="{{ asset('vendor/lancer/js/myaccount/API.js') }}"></script>
+    <script src="{{ asset('vendor/lancer/js/myaccount/viewModel.js') }}"></script>
+{% endblock %}

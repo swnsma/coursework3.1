@@ -25,3 +25,6 @@ patient_disease_list:
 patient_disease_load:
     path: /patient_disease_load/{id}/{active}
     defaults: { _controller: PatientDiseaseBundle:PatientDiseaseList:load, id:no, active: 0}
+patient_disease_user_load:
+    path: /patient_disease_load_user/{active}
+    defaults: { _controller: PatientDiseaseBundle:PatientDiseaseList:forUserLoad, active: 0}

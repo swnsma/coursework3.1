@@ -1,17 +1,3 @@
-function PatientService(obj)
-{
-    var self = this;
-    self.title = obj.title;
-    self.user_name = obj.user_name;
-    self.date = obj.date;
-    self.time = obj.time;
-    self.id = obj.id;
-
-    self.openPatient = function () {
-        window.location= 'http://' + window.location.host + '/' + window.location.pathname.split('/')[1]+ '/patient_service/' + self.id;
-    };
-}
-
 function ViewModel()
 {
     var that = this;

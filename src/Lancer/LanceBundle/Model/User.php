@@ -39,4 +39,16 @@ class User extends AbstractModel
         return $this;
     }
 
+    public function transfer()
+    {
+        try {
+        $sth = DbConnection::getInstance()->getConnection()->prepare("CALL UserTransfer(?)");
+        $sth->execute(array($this->getId()));
+        $this->setPatientId(DbConnection::getInstance()->getConnection()->lastInsertId());
+        } catch(\Exception $e) {
+            echo 'TRANSFER REJECTED.';
+            die();
+        }
+    }
+
 }

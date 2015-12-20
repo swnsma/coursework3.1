@@ -151,7 +151,7 @@ class AuthorizationController extends BaseController
         $user = new User();
         $user->loadByHash($data['hash']);
         if ($user->getId() && $data['password']) {
-            $user->setPassword($data['password']);
+            $user->setPassword(md5($data['password']));
             $user->save();
         }
         return $this->redirectToRoute('lance_authorization');

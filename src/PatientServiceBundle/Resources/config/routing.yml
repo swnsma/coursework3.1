@@ -23,3 +23,6 @@ patient_service_list:
 patient_service_load:
     path:     /patient_service_load/{id}/{active}
     defaults: { _controller: PatientServiceBundle:PatientServiceList:load, id: no, active: 0}
+patient_service_user_load:
+    path:   /patient_service_load_user/{active}
+    defaults: { _controller: PatientServiceBundle:PatientServiceList:forUserLoad, active: 0}

@@ -61,14 +61,15 @@
                 );
             </task>
             <task>
-            CREATE TABLE IF NOT EXISTS user (
-            id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
-            name varchar(50),
-            second_name varchar(50),
-            role_id int NOT NULL,
-            photo varchar(100),
-            CONSTRAINT perUserRole FOREIGN KEY (role_id) REFERENCES role(id) ON DELETE CASCADE ON UPDATE CASCADE
-            );
+                CREATE TABLE IF NOT EXISTS user (
+                id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+                name varchar(50),
+                second_name varchar(50),
+                role_id int NOT NULL,
+                patient_id INT,
+                photo varchar(100),
+                CONSTRAINT perUserRole FOREIGN KEY (role_id) REFERENCES role(id) ON DELETE CASCADE ON UPDATE CASCADE
+                );
             </task>
             <task>
                 CREATE TABLE IF NOT EXISTS patient_service (
@@ -163,7 +164,9 @@
                 ("patient_service_delete"),
                 ("patient_service_edit"),
                 ("patient_service_new"),
-                ("patient_service_list");
+                ("patient_service_list"),
+                ("lance_reject_save"),
+                ("lance_myaccount");
             </task>
             <task>
                 INSERT INTO `role_acl` (`role_id`, `acl_id`) VALUES
@@ -248,7 +251,7 @@
                 CREATE PROCEDURE GetUserSpecifiedPatientService(IN userId INT, IN active TINYINT)
                 BEGIN
                 SELECT patient_service.id, patient_service.patient_id, patient_service.user_id,
-                patient_service.service_id, patient_service.date, patient_service.time, patient_service.notes, CONCAT(user.name, ' ', user.second_name) as user_name, CONCAT(patient.name, ' ', patient.second_name) as patient_name, service.title
+                patient_service.service_id, patient_service.date, patient_service.time, patient_service.notes, CONCAT(user.name, ' ', user.second_name) as user_name, CONCAT(patient.name, ' ', patient.second_name) as patient_name, service.title, service.price
                 FROM patient_service INNER JOIN user ON patient_service.user_id = user.id
                 INNER JOIN patient ON patient_service.patient_id = patient.id
                 INNER JOIN service ON patient_service.service_id = service.id
@@ -270,6 +273,124 @@
                 IF(active=1,
                 IF(patient_service.date > CURDATE() OR (patient_service.date = CURDATE() AND patient_service.time > CURTIME()), true, false), true)
                 ORDER BY date DESC;
+                END;
+            </task>
+            <task>
+                CREATE TABLE rejection(
+                id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                code VARCHAR(50),
+                label VARCHAR(100),
+                status TINYINT DEFAULT 0
+                );
+            </task>
+            <task>
+                INSERT INTO rejection (code, label, status)
+                VALUES
+                ('user',  'Unable to create new user',  '0'),
+                ('patient',  'Unable to create new patient',  '0'),
+                ('disease', 'Unable to create new disease', '0'),
+                ('role', 'Unable to create new role', '0'),
+                ('service', 'Unable to create new service', '0'),
+                ('patient_service', 'Unable to assign service for patient', '0'),
+                ('patient_disease', 'Unable to assign disease for patient', '0');
+            </task>
+            <task>
+                CREATE TRIGGER `reject_check_user` BEFORE INSERT ON  `user`
+                FOR EACH
+                ROW BEGIN
+                SELECT rejection.status
+                INTO @status
+                FROM rejection
+                WHERE code =  'user';
+                IF @status =1 THEN SIGNAL SQLSTATE '45000';
+                END IF;
+                END;
+            </task>
+            <task>
+                CREATE TRIGGER reject_check_service BEFORE INSERT ON service
+                FOR EACH
+                ROW BEGIN
+                SELECT rejection.status
+                INTO @status
+                FROM rejection
+                WHERE code =  'service';
+                IF @status =1 THEN SIGNAL SQLSTATE '45000';
+                END IF;
+                END;
+            </task>
+            <task>
+                CREATE TRIGGER reject_check_disease BEFORE INSERT ON disease
+                FOR EACH
+                ROW BEGIN
+                SELECT rejection.status
+                INTO @status
+                FROM rejection
+                WHERE code =  'disease';
+                IF @status =1 THEN SIGNAL SQLSTATE '45000';
+                END IF;
+                END;
+            </task>
+            <task>
+                CREATE TRIGGER reject_check_patient BEFORE INSERT ON patient
+                FOR EACH
+                ROW BEGIN
+                SELECT rejection.status
+                INTO @status
+                FROM rejection
+                WHERE code =  'patient';
+                IF @status =1 THEN SIGNAL SQLSTATE '45000';
+                END IF;
+                END;
+            </task>
+            <task>
+                CREATE TRIGGER reject_check_role BEFORE INSERT ON role
+                FOR EACH
+                ROW BEGIN
+                SELECT rejection.status
+                INTO @status
+                FROM rejection
+                WHERE code =  'role';
+                IF @status =1 THEN SIGNAL SQLSTATE '45000';
+                END IF ;
+                END;
+            </task>
+            <task>
+                CREATE TRIGGER reject_check_patient_disease BEFORE INSERT ON patient_disease
+                FOR EACH
+                ROW BEGIN
+                SELECT rejection.status
+                INTO @status
+                FROM rejection
+                WHERE code =  'patient_disease';
+                IF @status =1 THEN SIGNAL SQLSTATE '45000';
+                END IF ;
+                END;
+            </task>
+            <task>
+                CREATE TRIGGER reject_check_patient_service BEFORE INSERT ON patient_service
+                FOR EACH
+                ROW BEGIN
+                SELECT rejection.status
+                INTO @status
+                FROM rejection
+                WHERE code =  'patient_service';
+                IF @status =1 THEN SIGNAL SQLSTATE '45000';
+                END IF ;
+                END;
+            </task>
+            <task>
+                CREATE PROCEDURE  `UserTransfer` ( IN  `userId` INT )
+                BEGIN
+                SELECT patient_id
+                INTO @patient
+                FROM user
+                WHERE id = userId;
+                IF @patient =0 THEN INSERT INTO patient( name, second_name, patient_photo )
+                SELECT name, second_name, photo
+                FROM user
+                WHERE id = userId;
+                UPDATE user SET patient_id = LAST_INSERT_ID( ) WHERE id = userId;
+                END IF ;
                 END;
             </task>
         </tasks>

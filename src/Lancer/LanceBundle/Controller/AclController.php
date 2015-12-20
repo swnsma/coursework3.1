@@ -3,6 +3,7 @@
 namespace Lancer\LanceBundle\Controller;
 
 use Lancer\LanceBundle\Model\Acl;
+use Lancer\LanceBundle\Model\Reject;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -37,6 +38,17 @@ class AclController extends BaseController
         $data = $request->request->all();
         Acl::saveAccess($data);
 
+        return new Response();
+    }
+
+    public function loadRejectionsAction() {
+        return new Response(json_encode(Reject::getRejects()));
+    }
+
+    public function saveRejectAction(Request $request)
+    {
+        $data = $request->request->all();
+        Reject::saveReject($data);
         return new Response();
     }
 }

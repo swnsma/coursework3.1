@@ -41,6 +41,7 @@
 {% block javascripts %}
     <script src="{{ asset('vendor/knockout/knockout-3.4.0.js') }}"></script>
     <script>patient_identify = '{{patient.id}}'</script>
+    <script src="{{ asset('vendor/manticora/patient_service/js/PatientService.js') }}"></script>
     <script src="{{ asset('vendor/manticora/patient_service/js/API.js') }}"></script>
     <script src="{{ asset('vendor/manticora/patient_service/js/viewModel.js') }}"></script>
 {% endblock %}

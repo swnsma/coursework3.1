@@ -35,4 +35,15 @@ class PatientServiceListController extends BaseController
         $data['total'] = count($data['items']);
         return new Response(json_encode($data));
     }
+
+    public  function forUserLoadAction(Request $request)
+    {
+        $id  = $request->getSession()->get('userId');
+        $active = $request->get('active')=="0"?false:true;
+        $collection = new PatientServiceCollection();
+        $data = array();
+        $data['items'] = $collection->getUserItemsData($id, $active);
+        $data['total'] = count($data['items']);
+        return new Response(json_encode($data));
+    }
 }

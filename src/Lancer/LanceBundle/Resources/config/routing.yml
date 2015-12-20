@@ -69,7 +69,28 @@ lance_logout:
 
 lance_myaccount:
     path: /myaccount
-    defaults: { _controller:LancerLanceBundle:User:myaccount }
+    defaults: { _controller: LancerLanceBundle:User:index }
+lance_user_patient_route:
+    path: /user_patient_route
+    defaults: { _controller: LancerLanceBundle:User:route }
+lance_user_save:
+    path: /user_save_changes
+    defaults: { _controller: LancerLanceBundle:User:save }
+    requirements:
+            _method: POST
+lance_reject_load:
+    path: /reject_load
+    defaults: { _controller: LancerLanceBundle:Acl:loadRejections }
+
+lance_reject_save:
+    path: /reject_save
+    defaults: { _controller: LancerLanceBundle:Acl:saveReject }
+    requirements:
+            _method: POST
+
+lance_user_load:
+    path: /user_load
+    defaults: { _controller: LancerLanceBundle:User:loadme }
 
 lance_login:
     path: /logintry
