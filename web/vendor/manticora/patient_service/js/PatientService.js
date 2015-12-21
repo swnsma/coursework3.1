@@ -10,6 +10,15 @@ function PatientService(obj)
     self.price = obj.price;
 
     self.openPatient = function () {
-        window.location= 'http://' + window.location.host + '/' + window.location.pathname.split('/')[1]+ '/patient_service/' + self.id;
+        var expr = new RegExp('https?://');
+        var url =  window.location.host;
+        if (url.search(expr) == -1) {
+            url = 'http://' + url;
+        }
+        if (window.location.pathname.split('/')[1]=='app_dev.php') {
+            url += window.location.pathname.split('/')[1];
+        }
+        url += "/patient_service/" + self.id;
+        window.location = url;
     };
 }

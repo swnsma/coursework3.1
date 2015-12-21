@@ -26,7 +26,7 @@ var api = {
     },
     loadServices: function (successFunction, active) {
         jQuery.ajax({
-            url: '/patient_service_load_user/'+(active?0:1),
+            url: '/patient_service_load_user/'+(active?1:0),
             type: 'GET',
             success: function(response) {
                 successFunction(response);

@@ -70,10 +70,10 @@
                         <div class="col-sm-4"></div>
                         <div class="col-sm-8">
                             <input type="submit" class="btn btn-info"/>
-                            {%  if disease is defined %}
-                            <a href="{{ path('disease_homepage', {id:disease.id}) }}">
+                            {%  if patient is defined %}
+                            <a href="{{ path('patient_homepage', {id:patient.id}) }}">
                                 {% else %}
-                                <a href="{{ path('disease_list') }}">
+                                <a href="{{ path('patient_list') }}">
                                     {% endif %}
                                     <div class="btn btn-danger" >Cancel</div></a>
                         </div>

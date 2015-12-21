@@ -171,7 +171,7 @@
                 CREATE TRIGGER generateHash AFTER INSERT ON user
                 FOR EACH ROW
                 BEGIN
-                    INSERT INTO `secret` VALUES (NEW.id, MD5(UNIX_TIMESTAMP()));
+                INSERT INTO `secret` VALUES (NEW.id, MD5(UNIX_TIMESTAMP()));
                 END;
             </task>
             <task>
@@ -232,7 +232,7 @@
                 WHERE patient_service.user_id = userId AND
                 IF(active=1,
                 IF(patient_service.date > CURDATE() OR (patient_service.date = CURDATE() AND patient_service.time > CURTIME()), true, false), true)
-                ORDER BY date DESC;
+                ORDER BY date ASC, time DESC;
                 END;
             </task>
             <task>
@@ -246,7 +246,7 @@
                 WHERE patient_service.patient_id = patientId AND
                 IF(active=1,
                 IF(patient_service.date > CURDATE() OR (patient_service.date = CURDATE() AND patient_service.time > CURTIME()), true, false), true)
-                ORDER BY date DESC;
+                ORDER BY date ASC, time DESC;
                 END;
             </task>
             <task>

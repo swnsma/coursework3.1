@@ -54,7 +54,7 @@ class PatientServiceCollection extends  AbstractCollection
     {
         $connection = DbConnection::getInstance()->getConnection();
         $sth = $connection->prepare("CALL GetPatientSpecifiedPatientService(?, ?)");
-        $sth->execute(array($patientId, $active?0:1));
+        $sth->execute(array($patientId, $active?1:0));
         $result = $sth->fetchAll();
         if(empty($result[0]['id'])) {
             return array();
@@ -68,7 +68,7 @@ class PatientServiceCollection extends  AbstractCollection
     {
         $connection = DbConnection::getInstance()->getConnection();
         $sth = $connection->prepare("CALL GetUserSpecifiedPatientService(?, ?)");
-        $sth->execute(array($userId, $active?0:1));
+        $sth->execute(array($userId, $active?1:0));
         $result = $sth->fetchAll();
 
         if(empty($result[0]['id'])) {

@@ -22,6 +22,7 @@ function Role(obj, role, routes) {
     var acl = obj['acl'];
     for(var r in routes)
     {
+        if(!routes[r].id) continue;
         if(acl[routes[r].id]) {
             self.list.push(new Acl(routes[r], true, role));
         } else {
@@ -58,12 +59,13 @@ function ViewModel()
     };
     that.save = function() {
         api.saveRole(function(response) {
+            response = JSON.parse(response);
             if(response.id) {
                 var obj = {
                     title: that.newRoleTitle(),
                     acl: {}
                 };
-                that.roles.push(new Role(obj, response.id, that.routes));
+                that.roles.push(new Role(obj, response.id, that.routes()));
                 that.addNew(false);
             }
         }, {title: that.newRoleTitle()});

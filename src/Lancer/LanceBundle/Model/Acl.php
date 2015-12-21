@@ -47,8 +47,8 @@ final class Acl
 
     static public function getAclList()
     {
-        $sql = "SELECT role.id as role, role.title, acl.id as acl, acl.route  FROM role INNER JOIN role_acl ON role.id = role_acl.role_id
-                INNER JOIN acl ON acl.id = role_acl.acl_id";
+        $sql = "SELECT role.id as role, role.title, acl.id as acl, acl.route  FROM role LEFT JOIN role_acl ON role.id = role_acl.role_id
+                LEFT JOIN acl ON acl.id = role_acl.acl_id";
         $sth = DbConnection::getInstance()->getConnection()->prepare($sql);
         $sth->execute();
         $list = array();

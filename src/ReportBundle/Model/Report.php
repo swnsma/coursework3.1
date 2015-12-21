@@ -22,7 +22,7 @@ class Report
     protected static function _getServicesProfit() {
         $sth = DbConnection::getInstance()
             ->getConnection()
-            ->prepare('SELECT sum(price) as total_price, avg(price) as avg FROM service INNER JOIN patient_service ON service.id = patient_service.service_id  GROUP BY title');
+            ->prepare('SELECT sum(price) as total_price, avg(price) as avg FROM service INNER JOIN patient_service ON service.id = patient_service.service_id ');
         $sth->execute();
         return $sth->fetch();
     }
