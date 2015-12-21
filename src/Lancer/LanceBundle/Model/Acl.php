@@ -12,7 +12,7 @@ final class Acl
 
             $sql = "SELECT * FROM `user`
           INNER JOIN `role` ON `user`.`role_id` = `role`.`id`
-          INNER JOIN `role_acl` ON `role_acl`.`role_id` = `role_acl`.`role_id`
+          INNER JOIN `role_acl` ON `role_acl`.`role_id` = `role`.`id`
           INNER JOIN `acl` ON `role_acl`.`acl_id` = `acl`.`id`
           WHERE `acl`.`route` = :route AND `user`.`id` = :id";
 
