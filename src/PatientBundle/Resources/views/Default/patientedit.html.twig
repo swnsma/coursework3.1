@@ -73,7 +73,7 @@
                             {%  if patient is defined %}
                             <a href="{{ path('patient_homepage', {id:patient.id}) }}">
                                 {% else %}
-                                <a href="{{ path('patient_list') }}">
+                                <a href="{{ path('patients_list') }}">
                                     {% endif %}
                                     <div class="btn btn-danger" >Cancel</div></a>
                         </div>

@@ -25,7 +25,7 @@ final class DbConnection
             self::$_connection = new \PDO($settings['string'], $settings['username'], $settings['password']);
             self::$_connection->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
             self::$_connection->setAttribute(\PDO::ATTR_DEFAULT_FETCH_MODE, \PDO::FETCH_ASSOC);
-        } catch (Exception $e) {
+        } catch (\PDOException $e) {
             throw new Exception('Connection to database failed.');
         }
     }

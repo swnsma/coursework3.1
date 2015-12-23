@@ -57,7 +57,7 @@
                 id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
                 name varchar(50),
                 second_name varchar(50),
-                role_id int NOT NULL,
+                role_id int NOT NULL DEFAULT 0,
                 patient_id INT,
                 photo varchar(100),
                 CONSTRAINT perUserRole FOREIGN KEY (role_id) REFERENCES role(id) ON DELETE CASCADE ON UPDATE CASCADE

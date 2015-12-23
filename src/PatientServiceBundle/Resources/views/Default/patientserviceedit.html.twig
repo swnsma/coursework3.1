@@ -44,13 +44,13 @@
                     <div class="form-group">
                         <label class="col-sm-2" for="date">Date</label>
                         <div class="col-sm-10">
-                            <input id="date" name="date" value="{% if data.item is defined %}{{ data.item.date }}{% endif %}"/>
+                            <input id="date" required="required" name="date" value="{% if data.item is defined %}{{ data.item.date }}{% endif %}"/>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2" for="time">Time</label>
                         <div class="col-sm-10">
-                            <input id="time" type="time" name="time" value="{% if data.item is defined %}{{ data.item.time }}{% endif %}"/>
+                            <input id="time" type="time" required="required" name="time" value="{% if data.item is defined %}{{ data.item.time }}{% endif %}"/>
                         </div>
                     </div>
                     <div class="form-group">
@@ -73,10 +73,12 @@
                         <div class="col-sm-2"></div>
                         <div class="col-sm-10">
                             <input type="submit" class="btn btn-info"/>
-                            {%  if disease is defined %}
-                            <a href="{{ path('disease_homepage', {id:disease.id}) }}">
-                                {% else %}
-                                <a href="{{ path('disease_list') }}">
+                            {%  if data.item.id is defined %}
+                            <a href="{{ path('patient_service_homepage', {id:data.item.id}) }}">
+                                {% elseif data.patients.id is defined %}
+                                <a href="{{ path('patient_service_list', {id:data.patients.id}) }}">
+                                    {% else %}
+                                    <a href="{{ path('patients_list') }}">
                                     {% endif %}
                                     <div class="btn btn-danger" >Cancel</div></a>
                         </div>

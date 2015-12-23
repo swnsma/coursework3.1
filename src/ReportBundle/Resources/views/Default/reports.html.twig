@@ -1,10 +1,11 @@
 {% extends 'base.html.twig' %}
-{% block title %}Patients report{% endblock %}
+{% block title %}Report{% endblock %}
 {% block body %}
     {{ include('header.html.twig') }}
 <h1>Patients report</h1>
 <div class="container">
     {% if diseases %}<a href="{{ path("report_diseases") }}"><div class="btn btn-info">Diseases report</div></a>{%  endif %}
     {% if services %}<a href="{{ path("report_services") }}"><div class="btn-danger btn">Services report</div></a>{%  endif %}
+    {% if not diseases and not services %} Sorry, no reports available for you.{% endif %}
 </div>
 {% endblock %}
